@@ -1,0 +1,618 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="icon" href="./bc logo.webp">
+  <title>E Commerce</title>
+  <link rel="stylesheet" href="./top.css">
+</head>
+<body>
+
+<header class="header" id="site-header">
+  <div class="right">
+    <a class="brand" href="./index.html" title="Hari IT Solutions">
+      <img src="./bc logo.webp" alt="Hari IT logo" width="40" height="40">
+      <div class="brand-title">
+        <span class="title">STACKLY</span>
+      </div>
+    </a>
+
+    <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-controls="main-nav" aria-expanded="false">☰</button>
+  </div>
+
+  <div class="left">
+    <nav id="main-nav" class="navBar" aria-label="Main navigation">
+      <div class="navLinks">
+        <ul class="linkRight">
+          <li class="dropdown">
+            <a href="./index.html" aria-haspopup="true" aria-expanded="false">Home ▾</a>
+            <ul class="dropdown-menu">
+              <li><a href="./home2.html">Home 2</a></li>
+            </ul>
+          </li>
+          <li><a href="./top.html">Top Categories</a></li>
+          <!-- <li><a href="./finance.html">Top Categories</a></li> -->
+          <li><a href="./product.html">Featured Products</a></li>
+          <li><a href="./testimonial.html">Customer Testimonials</a></li>
+          <li><a href="./dashboard.html">DashBoard</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <button class="btn-cta" onclick="location.href='./log.html'">LogIn</button>
+  </div>
+</header>
+
+
+
+
+
+
+
+<!-- main section codes -->
+
+<section class="jump category-hero" data-animate="jump">
+  <div class="category-hero-inner">
+
+    <div class="category-hero-content">
+      <h1 class="category-title">Shop by Categories</h1>
+      <p class="category-desc">
+        Explore the best product categories tailored for your everyday needs.  
+        Find what you love with ease and style.
+      </p>
+    </div>
+
+    <div class="category-hero-banner">
+      <img src="https://via.placeholder.com/1200x400" alt="Categories Banner">
+    </div>
+
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+<section class="fade categories-grid" data-animate="fade" aria-labelledby="categories-heading">
+  <div class="categories-inner">
+
+    <header class="categories-header">
+      <h2 id="categories-heading" class="categories-title">Main Categories</h2>
+      <p class="categories-sub">Browse top categories to discover curated collections and best sellers.</p>
+    </header>
+
+    <ul class="category-list" role="list">
+      <!-- Card: Men -->
+      <li class="category-card">
+        <a class="category-link" href="/category/men" aria-label="Shop Men">
+          <div class="category-thumb">
+            <img src="https://via.placeholder.com/600x400?text=Men" alt="Men category image">
+          </div>
+          <div class="category-meta">
+            <h3 class="category-name">Men</h3>
+            <span class="category-cta">Shop Now →</span>
+          </div>
+        </a>
+      </li>
+
+      <!-- Card: Women -->
+      <li class="category-card">
+        <a class="category-link" href="/category/women" aria-label="Shop Women">
+          <div class="category-thumb">
+            <img src="https://via.placeholder.com/600x400?text=Women" alt="Women category image">
+          </div>
+          <div class="category-meta">
+            <h3 class="category-name">Women</h3>
+            <span class="category-cta">Shop Now →</span>
+          </div>
+        </a>
+      </li>
+
+      <!-- Card: Electronics -->
+      <li class="category-card">
+        <a class="category-link" href="/category/electronics" aria-label="Shop Electronics">
+          <div class="category-thumb">
+            <img src="https://via.placeholder.com/600x400?text=Electronics" alt="Electronics category image">
+          </div>
+          <div class="category-meta">
+            <h3 class="category-name">Electronics</h3>
+            <span class="category-cta">Shop Now →</span>
+          </div>
+        </a>
+      </li>
+
+      <!-- Card: Home Decor -->
+      <li class="category-card">
+        <a class="category-link" href="/category/home-decor" aria-label="Shop Home Decor">
+          <div class="category-thumb">
+            <img src="https://via.placeholder.com/600x400?text=Home+Decor" alt="Home Decor category image">
+          </div>
+          <div class="category-meta">
+            <h3 class="category-name">Home Decor</h3>
+            <span class="category-cta">Shop Now →</span>
+          </div>
+        </a>
+      </li>
+
+      <!-- Card: Beauty -->
+      <li class="category-card">
+        <a class="category-link" href="/category/beauty" aria-label="Shop Beauty">
+          <div class="category-thumb">
+            <img src="https://via.placeholder.com/600x400?text=Beauty" alt="Beauty category image">
+          </div>
+          <div class="category-meta">
+            <h3 class="category-name">Beauty</h3>
+            <span class="category-cta">Shop Now →</span>
+          </div>
+        </a>
+      </li>
+
+      <!-- Card: Sports -->
+      <li class="category-card">
+        <a class="category-link" href="/category/sports" aria-label="Shop Sports">
+          <div class="category-thumb">
+            <img src="https://via.placeholder.com/600x400?text=Sports" alt="Sports category image">
+          </div>
+          <div class="category-meta">
+            <h3 class="category-name">Sports</h3>
+            <span class="category-cta">Shop Now →</span>
+          </div>
+        </a>
+      </li>
+    </ul>
+
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="slide subcategories" data-animate="slide" aria-labelledby="subcategories-heading">
+  <div class="subcategories-inner">
+
+    <header class="subcategories-header">
+      <h2 id="subcategories-heading" class="subcategories-title">
+        Sub-categories — Men
+      </h2>
+      <p class="subcategories-desc">
+        Jump into focused collections within Men: tees, shirts, denim, shoes and more.
+      </p>
+    </header>
+
+    <!-- Responsive container: grid on desktop, horizontal scroll on small screens -->
+    <div class="subcat-container">
+
+      <!-- Sub-category card 1 -->
+      <a class="subcat-card" href="/category/men/t-shirts" aria-label="Shop Men's T-Shirts">
+        <div class="subcat-thumb" aria-hidden="true">
+          <!-- inline SVG icon placeholder (replace with images if you prefer) -->
+          <svg width="52" height="52" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="subcat-icon">
+            <path d="M4 7h16v10a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7z" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M7 7V5a2 2 0 0 1 2-2h2" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="subcat-meta">
+          <h3 class="subcat-name">T-Shirts</h3>
+          <span class="subcat-count">240 items</span>
+        </div>
+      </a>
+
+      <!-- Sub-category card 2 -->
+      <a class="subcat-card" href="/category/men/shirts" aria-label="Shop Men's Shirts">
+        <div class="subcat-thumb" aria-hidden="true">
+          <svg width="52" height="52" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="subcat-icon">
+            <path d="M3 7h18v10a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V7z" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M9 3h6" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="subcat-meta">
+          <h3 class="subcat-name">Shirts</h3>
+          <span class="subcat-count">156 items</span>
+        </div>
+      </a>
+
+      <!-- Sub-category card 3 -->
+      <a class="subcat-card" href="/category/men/jeans" aria-label="Shop Men's Jeans">
+        <div class="subcat-thumb" aria-hidden="true">
+          <svg width="52" height="52" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="subcat-icon">
+            <path d="M4 3h16v18H4z" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M8 7v10" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="subcat-meta">
+          <h3 class="subcat-name">Jeans</h3>
+          <span class="subcat-count">98 items</span>
+        </div>
+      </a>
+
+      <!-- Sub-category card 4 -->
+      <a class="subcat-card" href="/category/men/footwear" aria-label="Shop Men's Footwear">
+        <div class="subcat-thumb" aria-hidden="true">
+          <svg width="52" height="52" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="subcat-icon">
+            <path d="M3 20s1-4 5-4 5 4 9 4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M8 16l1-6h6" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="subcat-meta">
+          <h3 class="subcat-name">Footwear</h3>
+          <span class="subcat-count">64 items</span>
+        </div>
+      </a>
+
+      <!-- Sub-category card 5 -->
+      <a class="subcat-card" href="/category/men/watches" aria-label="Shop Men's Watches">
+        <div class="subcat-thumb" aria-hidden="true">
+          <svg width="52" height="52" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="subcat-icon">
+            <circle cx="12" cy="12" r="8" stroke="currentColor" stroke-width="1.4"/>
+            <path d="M12 8v5l3 1" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="subcat-meta">
+          <h3 class="subcat-name">Watches</h3>
+          <span class="subcat-count">34 items</span>
+        </div>
+      </a>
+
+    </div> <!-- .subcat-container -->
+
+  </div> <!-- .subcategories-inner -->
+</section>
+
+
+
+
+
+
+<section class="jump promo-section" data-animate="jump" aria-labelledby="promo-heading">
+  <div class="promo-inner">
+
+    <header class="promo-header">
+      <h2 id="promo-heading" class="promo-title">Deals & Promotions</h2>
+      <p class="promo-sub">Top deals across categories — limited time offers. Shop before they expire!</p>
+    </header>
+
+    <div class="promo-list" role="list">
+      <!-- Promo 1: Fashion -->
+      <article class="promo-card" role="listitem" aria-labelledby="promo-fashion">
+        <div class="promo-media" aria-hidden="true">
+          <img src="https://via.placeholder.com/800x480?text=Fashion+Sale" alt="">
+          <span class="promo-badge">Up to 50% off</span>
+        </div>
+        <div class="promo-body">
+          <h3 id="promo-fashion" class="promo-head">Fashion — Seasonal Sale</h3>
+          <p class="promo-copy">Refresh your wardrobe with trending styles. Selected items up to 50% off.</p>
+          <div class="promo-actions">
+            <a class="promo-cta" href="/category/fashion" aria-label="Shop Fashion deals">Shop Fashion</a>
+            <span class="promo-meta">Limited time</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Promo 2: Electronics -->
+      <article class="promo-card" role="listitem" aria-labelledby="promo-electronics">
+        <div class="promo-media" aria-hidden="true">
+          <img src="https://via.placeholder.com/800x480?text=Electronics+Mega+Sale" alt="">
+          <span class="promo-badge">Mega Sale</span>
+        </div>
+        <div class="promo-body">
+          <h3 id="promo-electronics" class="promo-head">Electronics Mega Sale</h3>
+          <p class="promo-copy">Top gadgets at unbeatable prices. Extra deals on select brands.</p>
+          <div class="promo-actions">
+            <a class="promo-cta" href="/category/electronics" aria-label="Shop Electronics deals">Shop Electronics</a>
+            <span class="promo-meta">While stocks last</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Promo 3: Beauty -->
+      <article class="promo-card" role="listitem" aria-labelledby="promo-beauty">
+        <div class="promo-media" aria-hidden="true">
+          <img src="https://via.placeholder.com/800x480?text=Beauty+Under+₹499" alt="">
+          <span class="promo-badge">Under ₹499</span>
+        </div>
+        <div class="promo-body">
+          <h3 id="promo-beauty" class="promo-head">Beauty — Under ₹499</h3>
+          <p class="promo-copy">Skincare & cosmetics picks curated under ₹499. Great value, top brands.</p>
+          <div class="promo-actions">
+            <a class="promo-cta" href="/category/beauty" aria-label="Shop Beauty deals">Shop Beauty</a>
+            <span class="promo-meta">Deal ends soon</span>
+          </div>
+        </div>
+      </article>
+    </div>
+
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="fade brands" data-animate="fade" aria-labelledby="brands-heading">
+  <div class="brands-inner">
+
+    <header class="brands-header">
+      <h2 id="brands-heading" class="brands-title">Popular Brands</h2>
+      <p class="brands-sub">Trusted brands shoppers love — shop by your favourite labels.</p>
+    </header>
+
+    <ul class="brand-list" role="list" aria-label="Popular brand logos">
+      <!-- Brand: Nike -->
+      <li class="brand-item">
+        <a class="brand-link" href="/brand/nike" aria-label="Nike brand page">
+          <img
+            class="brand-logo"
+            src="https://via.placeholder.com/240x80?text=Nike"
+            srcset="https://via.placeholder.com/480x160?text=Nike 2x"
+            alt="Nike logo"
+            loading="lazy"
+            width="240"
+            height="80">
+        </a>
+      </li>
+
+      <!-- Brand: Samsung -->
+      <li class="brand-item">
+        <a class="brand-link" href="/brand/samsung" aria-label="Samsung brand page">
+          <img
+            class="brand-logo"
+            src="https://via.placeholder.com/240x80?text=Samsung"
+            srcset="https://via.placeholder.com/480x160?text=Samsung 2x"
+            alt="Samsung logo"
+            loading="lazy"
+            width="240"
+            height="80">
+        </a>
+      </li>
+
+      <!-- Brand: Puma -->
+      <li class="brand-item">
+        <a class="brand-link" href="/brand/puma" aria-label="Puma brand page">
+          <img
+            class="brand-logo"
+            src="https://via.placeholder.com/240x80?text=Puma"
+            srcset="https://via.placeholder.com/480x160?text=Puma 2x"
+            alt="Puma logo"
+            loading="lazy"
+            width="240"
+            height="80">
+        </a>
+      </li>
+
+      <!-- Brand: L'Oréal -->
+      <li class="brand-item">
+        <a class="brand-link" href="/brand/loreal" aria-label="L'Oréal brand page">
+          <img
+            class="brand-logo"
+            src="https://via.placeholder.com/240x80?text=L%27Or%C3%A9al"
+            srcset="https://via.placeholder.com/480x160?text=L%27Or%C3%A9al 2x"
+            alt="L'Oréal logo"
+            loading="lazy"
+            width="240"
+            height="80">
+        </a>
+      </li>
+
+      <li class="brand-item">
+        <a class="brand-link" href="/brand/adidas" aria-label="Adidas brand page">
+          <img
+            class="brand-logo"
+            src="https://via.placeholder.com/240x80?text=Adidas"
+            srcset="https://via.placeholder.com/480x160?text=Adidas 2x"
+            alt="Adidas logo"
+            loading="lazy"
+            width="240"
+            height="80">
+        </a>
+      </li>
+
+      <!-- Brand: Apple -->
+      <li class="brand-item">
+        <a class="brand-link" href="/brand/apple" aria-label="Apple brand page">
+          <img
+            class="brand-logo"
+            src="https://via.placeholder.com/240x80?text=Apple"
+            srcset="https://via.placeholder.com/480x160?text=Apple 2x"
+            alt="Apple logo"
+            loading="lazy"
+            width="240"
+            height="80">
+        </a>
+      </li>
+
+      <!-- Brand: Reebok -->
+      <li class="brand-item">
+        <a class="brand-link" href="/brand/reebok" aria-label="Reebok brand page">
+          <img
+            class="brand-logo"
+            src="https://via.placeholder.com/240x80?text=Reebok"
+            srcset="https://via.placeholder.com/480x160?text=Reebok 2x"
+            alt="Reebok logo"
+            loading="lazy"
+            width="240"
+            height="80">
+        </a>
+      </li>
+
+      <!-- Brand: Philips -->
+      <li class="brand-item">
+        <a class="brand-link" href="/brand/philips" aria-label="Philips brand page">
+          <img
+            class="brand-logo"
+            src="https://via.placeholder.com/240x80?text=Philips"
+            srcset="https://via.placeholder.com/480x160?text=Philips 2x"
+            alt="Philips logo"
+            loading="lazy"
+            width="240"
+            height="80">
+        </a>
+      </li>
+
+      <!-- Brand: Gucci -->
+      <li class="brand-item">
+        <a class="brand-link" href="/brand/gucci" aria-label="Gucci brand page">
+          <img
+            class="brand-logo"
+            src="https://via.placeholder.com/240x80?text=Gucci"
+            srcset="https://via.placeholder.com/480x160?text=Gucci 2x"
+            alt="Gucci logo"
+            loading="lazy"
+            width="240"
+            height="80">
+        </a>
+      </li>
+
+      <!-- Brand: Sony -->
+      <li class="brand-item">
+        <a class="brand-link" href="/brand/sony" aria-label="Sony brand page">
+          <img
+            class="brand-logo"
+            src="https://via.placeholder.com/240x80?text=Sony"
+            srcset="https://via.placeholder.com/480x160?text=Sony 2x"
+            alt="Sony logo"
+            loading="lazy"
+            width="240"
+            height="80">
+        </a>
+      </li>
+
+      <li class="brand-item">
+        <a class="brand-link" href="/brand/zara" aria-label="Zara brand page">
+          <img
+            class="brand-logo"
+            src="https://via.placeholder.com/240x80?text=Zara"
+            srcset="https://via.placeholder.com/480x160?text=Zara 2x"
+            alt="Zara logo"
+            loading="lazy"
+            width="240"
+            height="80">
+        </a>
+      </li>
+
+      <!-- Brand: H&M -->
+      <li class="brand-item">
+        <a class="brand-link" href="/brand/hm" aria-label="H&M brand page">
+          <img
+            class="brand-logo"
+            src="https://via.placeholder.com/240x80?text=H%26M"
+            srcset="https://via.placeholder.com/480x160?text=H%26M 2x"
+            alt="H&amp;M logo"
+            loading="lazy"
+            width="240"
+            height="80">
+        </a>
+      </li>
+
+      <!-- Add more brand items here (duplicate the li.brand-item block) -->
+    </ul>
+
+  </div>
+</section>
+
+<!-- <section class="slide" data-animate="slide">Slide Box</section> -->
+
+
+
+
+
+
+
+<!-- <section class="jump " data-animate="jump"></section>
+
+<section class="fade" data-animate="fade">Fade In Box</section>
+
+<section class="slide" data-animate="slide">Slide Box</section> -->
+
+
+
+
+
+
+
+<footer class="footer">
+  <div class="footer-container">
+
+    <div class="footer-about">
+      <a class="brand" href="./404.html" title="Hari IT Solutions">
+        <img src="./bc logo.webp" alt="Hari IT logo" width="40" height="40">
+        <div class="brand-title">
+          <span class="title">STACKLY</span>
+        </div>
+      </a>
+
+      <div>
+        <h3 class="footer-title">About Us</h3>
+        <p class="footer-text">We provide the best products at the best prices. Your satisfaction is our priority.</p>
+        <div class="footer-social">
+          <a href="./404.html" class="social-icon">
+            <img src="./facebook (1).webp" alt="">
+          </a>
+          <a href="./404.html" class="social-icon">
+            <img src="./twitter (1).webp" alt="">
+          </a>
+          <a href="./404.html" class="social-icon">
+            <img src="./instagram (1).webp" alt="">
+          </a>
+          <a href="./404.html" class="social-icon">
+            <img src="./linkedin (1).webp" alt="">
+          </a>
+        </div>
+      </div>
+      
+    </div>
+
+    <div class="footer-links">
+      <h3 class="footer-title">Quick Links</h3>
+      <ul class="footer-list">
+        <li><a href="./top.html">Top Categories</a></li>
+        <li><a href="./product.html">Featured Products</a></li>
+        <li><a href="testimonial.html">Customer Testimonials</a></li>
+        <li><a href="./dashboard.html">DashBoard</a></li>
+        <li><a href="./log.html">LogIn</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-contact">
+      <h3 class="footer-title">Contact</h3>
+      <p class="footer-text">123 E-Commerce St, City, Country</p>
+      <p class="footer-text mail">Email:support@ecommerce.com</p>
+      <p class="footer-text">Phone: +123 456 7890</p>
+      <!-- <div class="footer-newsletter">
+        <input type="email" placeholder="Your email" class="newsletter-input">
+        <button class="newsletter-btn">Subscribe</button>
+      </div> -->
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2025 E-Commerce. All Rights Reserved.</p>
+  </div>
+</footer>
+
+
+<script src="./script.js"></script>
+</body>
+</html>

@@ -1,0 +1,998 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="icon" href="./bc logo.webp">
+  <title>E Commerce</title>
+  <link rel="stylesheet" href="./product.css">
+</head>
+<body>
+
+<header class="header" id="site-header">
+  <div class="right">
+    <a class="brand" href="./index.html" title="Hari IT Solutions">
+      <img src="./bc logo.webp" alt="Hari IT logo" width="40" height="40">
+      <div class="brand-title">
+        <span class="title">STACKLY</span>
+      </div>
+    </a>
+
+    <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-controls="main-nav" aria-expanded="false">☰</button>
+  </div>
+
+  <div class="left">
+    <nav id="main-nav" class="navBar" aria-label="Main navigation">
+      <div class="navLinks">
+        <ul class="linkRight">
+          <li class="dropdown">
+            <a href="./index.html" aria-haspopup="true" aria-expanded="false">Home ▾</a>
+            <ul class="dropdown-menu">
+              <li><a href="./home2.html">Home 2</a></li>
+            </ul>
+          </li>
+          <li><a href="./top.html">Top Categories</a></li>
+          <!-- <li><a href="./finance.html">Top Categories</a></li> -->
+          <li><a href="./product.html">Featured Products</a></li>
+          <li><a href="./testimonial.html">Customer Testimonials</a></li>
+          <li><a href="./dashboard.html">DashBoard</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <button class="btn-cta" onclick="location.href='./log.html'">LogIn</button>
+  </div>
+</header>
+
+
+
+
+
+
+
+
+
+<section class="jump page-hero" data-animate="jump" aria-labelledby="hero-title" role="region">
+  <div class="container hero-inner">
+    <p class="hero-pretitle" aria-hidden="true">Top Picks</p>
+
+    <h1 id="hero-title" class="hero-title">Featured Products</h1>
+
+    <p class="hero-tagline">Handpicked best-sellers curated for you</p>
+
+    <div class="hero-cta">
+      <a class="btn btn-primary" href="/collections/featured" aria-label="View featured products">
+        Shop Featured
+      </a>
+      <span class="hero-note" aria-hidden="true">• Free shipping on orders ₹999+</span>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+<section class="fade product-controls" data-animate="fade" aria-label="Product filter and sort">
+  <div class="container controls-inner">
+
+    <!-- Mobile filter toggle: uses details so it works without JS -->
+    <details class="mobile-filter-toggle" aria-hidden="true">
+      <summary class="mobile-filter-summary">Filters & Sort</summary>
+
+      <!-- Filters in an accordion for mobile -->
+      <form class="filters-form" id="filters-form" method="get" action="#" aria-label="Filter featured products">
+        <!-- Category -->
+        <details class="filter-accordion" open>
+          <summary>Category</summary>
+          <div class="filter-body">
+            <select name="category" id="filter-category" aria-label="Filter by category">
+              <option value="">All categories</option>
+              <option value="clothing">Clothing</option>
+              <option value="accessories">Accessories</option>
+              <option value="home">Home & Living</option>
+              <option value="beauty">Beauty</option>
+            </select>
+          </div>
+        </details>
+
+        <!-- Price -->
+        <details class="filter-accordion">
+          <summary>Price</summary>
+          <div class="filter-body">
+            <div class="price-inputs">
+              <label for="price-min">Min (₹)</label>
+              <input type="number" id="price-min" name="price_min" min="0" step="1" placeholder="0">
+
+              <label for="price-max">Max (₹)</label>
+              <input type="number" id="price-max" name="price_max" min="0" step="1" placeholder="9999">
+            </div>
+
+            <label for="price-range" class="sr-only">Quick price slider</label>
+            <input type="range" id="price-range" name="price_range" min="0" max="10000" step="50" value="10000" aria-valuemin="0" aria-valuemax="10000">
+            <div class="range-note">Use number fields to set exact range, or move the slider for quick selection.</div>
+          </div>
+        </details>
+
+        <!-- Ratings -->
+        <details class="filter-accordion">
+          <summary>Ratings</summary>
+          <div class="filter-body">
+            <fieldset>
+              <legend class="sr-only">Filter by rating</legend>
+              <label class="rating-option">
+                <input type="checkbox" name="rating[]" value="4">
+                <span class="stars" aria-hidden="true">★★★★ &amp; up</span>
+                <span class="visually-hidden">4 stars and up</span>
+              </label>
+
+              <label class="rating-option">
+                <input type="checkbox" name="rating[]" value="3">
+                <span class="stars" aria-hidden="true">★★★ &amp; up</span>
+                <span class="visually-hidden">3 stars and up</span>
+              </label>
+
+              <label class="rating-option">
+                <input type="checkbox" name="rating[]" value="2">
+                <span class="stars" aria-hidden="true">★★ &amp; up</span>
+                <span class="visually-hidden">2 stars and up</span>
+              </label>
+            </fieldset>
+          </div>
+        </details>
+
+        <!-- New arrivals -->
+        <details class="filter-accordion">
+          <summary>New arrivals</summary>
+          <div class="filter-body">
+            <label class="checkbox-inline">
+              <input type="checkbox" name="new" value="1"> Only show new arrivals
+            </label>
+          </div>
+        </details>
+
+        <!-- Discount -->
+        <details class="filter-accordion">
+          <summary>Discount</summary>
+          <div class="filter-body">
+            <label class="discount-option">
+              <input type="radio" name="discount" value="" checked>
+              Any
+            </label>
+            <label class="discount-option">
+              <input type="radio" name="discount" value="10"> 10% &amp; up
+            </label>
+            <label class="discount-option">
+              <input type="radio" name="discount" value="25"> 25% &amp; up
+            </label>
+            <label class="discount-option">
+              <input type="radio" name="discount" value="50"> 50% &amp; up
+            </label>
+          </div>
+        </details>
+
+        <!-- Brand -->
+        <details class="filter-accordion">
+          <summary>Brand</summary>
+          <div class="filter-body">
+            <label class="brand-option"><input type="checkbox" name="brand[]" value="brand-a"> Brand A</label>
+            <label class="brand-option"><input type="checkbox" name="brand[]" value="brand-b"> Brand B</label>
+            <label class="brand-option"><input type="checkbox" name="brand[]" value="brand-c"> Brand C</label>
+            <label class="brand-option"><input type="checkbox" name="brand[]" value="brand-d"> Brand D</label>
+          </div>
+        </details>
+
+        <div class="filter-actions">
+          <button type="submit" class="btn-apply">Apply filters</button>
+          <button type="reset" class="btn-reset">Reset</button>
+        </div>
+      </form>
+    </details>
+
+    <!-- Desktop layout: left = sidebar filters, right = top bar with sort -->
+    <div class="controls-grid">
+
+      <!-- Sidebar filters (visible on desktop) -->
+      <form class="filters-sidebar" id="filters-sidebar" method="get" action="#" aria-label="Filter featured products">
+        <h3 class="filters-title">Filters</h3>
+
+        <div class="filter-block">
+          <label for="sidebar-category" class="filter-label">Category</label>
+          <select name="category" id="sidebar-category">
+            <option value="">All categories</option>
+            <option value="clothing">Clothing</option>
+            <option value="accessories">Accessories</option>
+            <option value="home">Home & Living</option>
+            <option value="beauty">Beauty</option>
+          </select>
+        </div>
+
+        <div class="filter-block">
+          <div class="filter-label">Price</div>
+          <div class="price-inputs">
+            <label for="sidebar-price-min" class="sr-only">Minimum price</label>
+            <input type="number" id="sidebar-price-min" name="price_min" placeholder="Min" min="0">
+
+            <label for="sidebar-price-max" class="sr-only">Maximum price</label>
+            <input type="number" id="sidebar-price-max" name="price_max" placeholder="Max" min="0">
+          </div>
+          <input type="range" id="sidebar-price-range" min="0" max="10000" step="50" value="10000" aria-hidden="true">
+        </div>
+
+        <div class="filter-block">
+          <div class="filter-label">Ratings</div>
+          <label class="rating-option">
+            <input type="checkbox" name="rating_sidebar[]" value="4">
+            <span class="stars">★★★★ &amp; up</span>
+          </label>
+          <label class="rating-option">
+            <input type="checkbox" name="rating_sidebar[]" value="3">
+            <span class="stars">★★★ &amp; up</span>
+          </label>
+        </div>
+
+        <div class="filter-block">
+          <label class="checkbox-inline">
+            <input type="checkbox" name="new_sidebar" value="1"> New arrivals only
+          </label>
+        </div>
+
+        <div class="filter-block">
+          <div class="filter-label">Discount</div>
+          <label class="discount-option"><input type="radio" name="discount_sidebar" value="" checked> Any</label>
+          <label class="discount-option"><input type="radio" name="discount_sidebar" value="10"> 10% &amp; up</label>
+          <label class="discount-option"><input type="radio" name="discount_sidebar" value="25"> 25% &amp; up</label>
+        </div>
+
+        <div class="filter-block">
+          <div class="filter-label">Brand</div>
+          <label class="brand-option"><input type="checkbox" name="brand_sidebar[]" value="brand-a"> Brand A</label>
+          <label class="brand-option"><input type="checkbox" name="brand_sidebar[]" value="brand-b"> Brand B</label>
+          <label class="brand-option"><input type="checkbox" name="brand_sidebar[]" value="brand-c"> Brand C</label>
+        </div>
+
+        <div class="filter-actions desktop-only">
+          <button type="submit" class="btn-apply">Apply filters</button>
+          <button type="reset" class="btn-reset">Reset</button>
+        </div>
+      </form>
+
+      <!-- Top bar + Sort (visible on desktop and mobile top after mobile details) -->
+      <div class="topbar-and-list">
+        <div class="topbar">
+          <div class="results-count" aria-live="polite">Showing <strong>24</strong> products</div>
+
+          <div class="sort-controls">
+            <label for="sort-by" class="sort-label">Sort by</label>
+            <select id="sort-by" name="sort_by" aria-label="Sort products">
+              <option value="price-asc">Price: Low to High</option>
+              <option value="price-desc">Price: High to Low</option>
+              <option value="latest">Latest</option>
+              <option value="rating-desc">Highest Rated</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Placeholder for products list -->
+        <div class="products-list" role="list" aria-label="Featured products list">
+          <!-- Example product card (repeat in your listing) -->
+          <article class="product-card" role="listitem">
+            <div class="product-thumb" aria-hidden="true">
+              <img src="https://via.placeholder.com/220x220?text=Product" alt="">
+            </div>
+            <div class="product-body">
+              <h4 class="product-title">Product name</h4>
+              <div class="product-meta">
+                <span class="price">₹1,299</span>
+                <span class="rating" aria-hidden="true">★★★★☆</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Add more product cards here -->
+        </div>
+      </div>
+
+    </div> <!-- .controls-grid -->
+  </div> <!-- .container -->
+</section>
+
+
+
+
+
+
+
+
+
+
+
+<main class="slide page-main" data-animate="slide">
+  <section class="featured-products" aria-labelledby="featured-heading">
+    <div class="container">
+      <header class="section-header">
+        <h2 id="featured-heading">Featured Products</h2>
+        <p class="section-sub">Handpicked best-sellers curated for you</p>
+      </header>
+
+      <!-- products grid -->
+      <div class="products-grid" role="list" aria-label="Featured products">
+
+        <!-- Product 1 -->
+        <article class="product-card" role="listitem" data-product-id="201" data-brand="AeroMove">
+          <div class="card-media">
+            <button class="wishlist-btn" aria-pressed="false" aria-label="Add AeroFlex Running Shoes to wishlist">
+              <svg class="icon-heart" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false">
+                <path d="M12 21s-7.2-4.8-9.2-7.2C-0.4 9.8 3 5 7.6 5c2.2 0 3.8 1.2 4.4 2.1.6-.9 2.2-2.1 4.4-2.1 4.6 0 8 4.8 4.8 8.8C19.2 16.2 12 21 12 21z" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+
+            <a class="thumb-link" href="/product/201" aria-label="View AeroFlex Running Shoes">
+              <img src="https://via.placeholder.com/420x420?text=AeroFlex+Running+Shoes" alt="AeroFlex running shoes in slate blue" class="product-image">
+            </a>
+          </div>
+
+          <div class="card-body">
+            <h3 class="product-name"><a href="/product/201">AeroFlex Running Shoes</a></h3>
+
+            <div class="price-row">
+              <span class="price">₹3,499</span>
+              <span class="price-old" aria-hidden="true">₹4,999</span>
+            </div>
+
+            <div class="rating-row" aria-label="4.6 out of 5 stars">
+              <span class="stars" aria-hidden="true">★★★★☆</span>
+              <span class="rating-count"> (2,134)</span>
+            </div>
+
+            <p class="product-short" aria-hidden="true">Lightweight breathable knit, cushioned midsole, ideal for long runs and gym sessions.</p>
+
+            <div class="card-actions">
+              <button class="btn-add" type="button" aria-label="Add AeroFlex Running Shoes to cart" data-action="add-to-cart" data-product-id="201">Add to Cart</button>
+              <a class="btn-quick" href="/product/201" aria-label="View AeroFlex Running Shoes details">View</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Product 2 -->
+        <article class="product-card" role="listitem" data-product-id="202" data-brand="LuxeBasics">
+          <div class="card-media">
+            <button class="wishlist-btn" aria-pressed="false" aria-label="Add Luxe Cotton Tee to wishlist">
+              <svg class="icon-heart" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false">
+                <path d="M12 21s-7.2-4.8-9.2-7.2C-0.4 9.8 3 5 7.6 5c2.2 0 3.8 1.2 4.4 2.1.6-.9 2.2-2.1 4.4-2.1 4.6 0 8 4.8 4.8 8.8C19.2 16.2 12 21 12 21z" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+
+            <a class="thumb-link" href="/product/202" aria-label="View Luxe Cotton Tee">
+              <img src="https://via.placeholder.com/420x420?text=Luxe+Cotton+Tee" alt="Luxe cotton t-shirt in white folded" class="product-image">
+            </a>
+          </div>
+
+          <div class="card-body">
+            <h3 class="product-name"><a href="/product/202">Luxe Cotton Tee</a></h3>
+
+            <div class="price-row">
+              <span class="price">₹699</span>
+            </div>
+
+            <div class="rating-row" aria-label="4.3 out of 5 stars">
+              <span class="stars" aria-hidden="true">★★★★☆</span>
+              <span class="rating-count"> (876)</span>
+            </div>
+
+            <p class="product-short" aria-hidden="true">Premium combed cotton, relaxed fit, pre-shrunk, available in 6 colours and sizes S–XXL.</p>
+
+            <div class="card-actions">
+              <button class="btn-add" type="button" aria-label="Add Luxe Cotton Tee to cart" data-action="add-to-cart" data-product-id="202">Add to Cart</button>
+              <a class="btn-quick" href="/product/202" aria-label="View Luxe Cotton Tee details">View</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Product 3 -->
+        <article class="product-card" role="listitem" data-product-id="203" data-brand="HomeAura">
+          <div class="card-media">
+            <button class="wishlist-btn" aria-pressed="false" aria-label="Add Aurora Ceramic Mug to wishlist">
+              <svg class="icon-heart" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false">
+                <path d="M12 21s-7.2-4.8-9.2-7.2C-0.4 9.8 3 5 7.6 5c2.2 0 3.8 1.2 4.4 2.1.6-.9 2.2-2.1 4.4-2.1 4.6 0 8 4.8 4.8 8.8C19.2 16.2 12 21 12 21z" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+
+            <a class="thumb-link" href="/product/203" aria-label="View Aurora Ceramic Mug">
+              <img src="https://via.placeholder.com/420x420?text=Aurora+Ceramic+Mug" alt="Aurora ceramic mug with gloss glaze" class="product-image">
+            </a>
+          </div>
+
+          <div class="card-body">
+            <h3 class="product-name"><a href="/product/203">Aurora Ceramic Mug (350ml)</a></h3>
+
+            <div class="price-row">
+              <span class="price">₹349</span>
+              <span class="price-old" aria-hidden="true">₹499</span>
+            </div>
+
+            <div class="rating-row" aria-label="4.8 out of 5 stars">
+              <span class="stars" aria-hidden="true">★★★★★</span>
+              <span class="rating-count"> (1,042)</span>
+            </div>
+
+            <p class="product-short" aria-hidden="true">Hand-glazed ceramic, dishwasher-safe, unique gradient finish—perfect for morning coffee.</p>
+
+            <div class="card-actions">
+              <button class="btn-add" type="button" aria-label="Add Aurora Ceramic Mug (350ml) to cart" data-action="add-to-cart" data-product-id="203">Add to Cart</button>
+              <a class="btn-quick" href="/product/203" aria-label="View Aurora Ceramic Mug details">View</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Product 4 -->
+        <article class="product-card" role="listitem" data-product-id="204" data-brand="CozyLoom">
+          <div class="card-media">
+            <button class="wishlist-btn" aria-pressed="false" aria-label="Add Velvet Throw Pillow to wishlist">
+              <svg class="icon-heart" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false">
+                <path d="M12 21s-7.2-4.8-9.2-7.2C-0.4 9.8 3 5 7.6 5c2.2 0 3.8 1.2 4.4 2.1.6-.9 2.2-2.1 4.4-2.1 4.6 0 8 4.8 4.8 8.8C19.2 16.2 12 21 12 21z" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+
+            <a class="thumb-link" href="/product/204" aria-label="View Velvet Throw Pillow">
+              <img src="https://via.placeholder.com/420x420?text=Velvet+Throw+Pillow" alt="Square velvet throw pillow in deep teal" class="product-image">
+            </a>
+          </div>
+
+          <div class="card-body">
+            <h3 class="product-name"><a href="/product/204">Velvet Throw Pillow — 45x45cm</a></h3>
+
+            <div class="price-row">
+              <span class="price">₹1,099</span>
+            </div>
+
+            <div class="rating-row" aria-label="4.4 out of 5 stars">
+              <span class="stars" aria-hidden="true">★★★★☆</span>
+              <span class="rating-count"> (430)</span>
+            </div>
+
+            <p class="product-short" aria-hidden="true">Luxurious velvet face, hypoallergenic insert included, adds texture to sofas and beds.</p>
+
+            <div class="card-actions">
+              <button class="btn-add" type="button" aria-label="Add Velvet Throw Pillow to cart" data-action="add-to-cart" data-product-id="204">Add to Cart</button>
+              <a class="btn-quick" href="/product/204" aria-label="View Velvet Throw Pillow details">View</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Product 5 -->
+        <article class="product-card" role="listitem" data-product-id="205" data-brand="DermaPure">
+          <div class="card-media">
+            <button class="wishlist-btn" aria-pressed="false" aria-label="Add HydraGlow Face Serum to wishlist">
+              <svg class="icon-heart" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false">
+                <path d="M12 21s-7.2-4.8-9.2-7.2C-0.4 9.8 3 5 7.6 5c2.2 0 3.8 1.2 4.4 2.1.6-.9 2.2-2.1 4.4-2.1 4.6 0 8 4.8 4.8 8.8C19.2 16.2 12 21 12 21z" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+
+            <a class="thumb-link" href="/product/205" aria-label="View HydraGlow Face Serum">
+              <img src="https://via.placeholder.com/420x420?text=HydraGlow+Face+Serum" alt="HydraGlow face serum bottle with dropper" class="product-image">
+            </a>
+          </div>
+
+          <div class="card-body">
+            <h3 class="product-name"><a href="/product/205">HydraGlow Face Serum — 30ml</a></h3>
+
+            <div class="price-row">
+              <span class="price">₹1,799</span>
+              <span class="price-old" aria-hidden="true">₹2,299</span>
+            </div>
+
+            <div class="rating-row" aria-label="4.9 out of 5 stars">
+              <span class="stars" aria-hidden="true">★★★★★</span>
+              <span class="rating-count"> (5,410)</span>
+            </div>
+
+            <p class="product-short" aria-hidden="true">Vitamin C + Hyaluronic Acid formula for brighter, hydrated skin. Lightweight, fast-absorbing.</p>
+
+            <div class="card-actions">
+              <button class="btn-add" type="button" aria-label="Add HydraGlow Face Serum to cart" data-action="add-to-cart" data-product-id="205">Add to Cart</button>
+              <a class="btn-quick" href="/product/205" aria-label="View HydraGlow Face Serum details">View</a>
+            </div>
+          </div>
+        </article>
+
+      </div> <!-- .products-grid -->
+    </div> <!-- .container -->
+  </section>
+</main>
+
+
+
+
+
+
+
+
+<section class="jump trending-deals" data-animate="jump" aria-labelledby="deals-heading">
+  <div class="container">
+    <header class="deals-header">
+      <h2 id="deals-heading">Trending Deals & Best Picks</h2>
+      <p class="deals-sub">Limited stock, top-rated best-sellers & huge discounts — grab them before they're gone.</p>
+    </header>
+
+    <div class="deals-grid" role="list" aria-label="Trending deals and best picks">
+
+      <!-- Deal 1: Limited stock + high discount -->
+      <article class="deal-card" role="listitem" data-product-id="301" data-brand="AeroMove">
+        <div class="media">
+          <a class="media-link" href="/product/301" aria-label="View AeroFlex Pro Running Shoes">
+            <img src="https://via.placeholder.com/360x260?text=AeroFlex+Pro" alt="AeroFlex Pro running shoes" class="deal-image">
+          </a>
+
+          <div class="badges">
+            <span class="badge badge-discount">40% OFF</span>
+            <span class="badge badge-limited">Limited stock</span>
+          </div>
+
+          <div class="people-buying" aria-hidden="true">🔥 18 people are buying</div>
+        </div>
+
+        <div class="deal-body">
+          <h3 class="deal-title"><a href="/product/301">AeroFlex Pro Running Shoes</a></h3>
+
+          <div class="deal-meta">
+            <div class="price">
+              <span class="price-now">₹4,199</span>
+              <span class="price-old">₹6,999</span>
+            </div>
+
+            <div class="rating" aria-label="4.7 out of 5 stars">
+              <span class="stars" aria-hidden="true">★★★★☆</span> <span class="rating-count">(1,820)</span>
+            </div>
+          </div>
+
+          <div class="stock-row" aria-hidden="true">
+            <div class="stock-text">Only 7 left</div>
+            <div class="stock-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="14" aria-label="Stock remaining 14 percent">
+              <div class="stock-fill" style="width:14%"></div>
+            </div>
+          </div>
+
+          <div class="deal-actions">
+            <button class="btn-sm btn-primary" type="button" aria-label="Add AeroFlex Pro to cart">Add to Cart</button>
+            <a class="link-quick" href="/product/301" aria-label="View AeroFlex Pro details">View</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Deal 2: High-rating best-seller -->
+      <article class="deal-card" role="listitem" data-product-id="302" data-brand="DermaPure">
+        <div class="media">
+          <a class="media-link" href="/product/302" aria-label="View HydraGlow Face Serum">
+            <img src="https://via.placeholder.com/360x260?text=HydraGlow+Serum" alt="HydraGlow face serum bottle" class="deal-image">
+          </a>
+
+          <div class="badges">
+            <span class="badge badge-bestseller">Best-seller</span>
+            <span class="badge badge-toprated">Top Rated</span>
+          </div>
+
+          <div class="people-buying" aria-hidden="true">🔥 34 people are buying</div>
+        </div>
+
+        <div class="deal-body">
+          <h3 class="deal-title"><a href="/product/302">HydraGlow Face Serum — 30ml</a></h3>
+
+          <div class="deal-meta">
+            <div class="price">
+              <span class="price-now">₹1,799</span>
+              <span class="price-old">₹2,299</span>
+            </div>
+
+            <div class="rating" aria-label="4.9 out of 5 stars">
+              <span class="stars" aria-hidden="true">★★★★★</span> <span class="rating-count">(5,410)</span>
+            </div>
+          </div>
+
+          <div class="deal-info">
+            <p class="tiny">Vitamin C + Hyaluronic Acid. Fast absorbing. Limited-time bundle available.</p>
+          </div>
+
+          <div class="deal-actions">
+            <button class="btn-sm btn-primary" type="button" aria-label="Add HydraGlow Face Serum to cart">Add to Cart</button>
+            <a class="link-quick" href="/product/302" aria-label="View HydraGlow Face Serum details">View</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Deal 3: High discount item -->
+      <article class="deal-card" role="listitem" data-product-id="303" data-brand="LuxeBasics">
+        <div class="media">
+          <a class="media-link" href="/product/303" aria-label="View Linen Summer Shirt">
+            <img src="https://via.placeholder.com/360x260?text=Linen+Shirt" alt="Linen summer shirt folded" class="deal-image">
+          </a>
+
+          <div class="badges">
+            <span class="badge badge-discount">50% OFF</span>
+          </div>
+
+          <div class="people-buying" aria-hidden="true">🔥 9 people are buying</div>
+        </div>
+
+        <div class="deal-body">
+          <h3 class="deal-title"><a href="/product/303">Linen Summer Shirt — Slim Fit</a></h3>
+
+          <div class="deal-meta">
+            <div class="price">
+              <span class="price-now">₹899</span>
+              <span class="price-old">₹1,799</span>
+            </div>
+
+            <div class="rating" aria-label="4.2 out of 5 stars">
+              <span class="stars" aria-hidden="true">★★★★☆</span> <span class="rating-count">(612)</span>
+            </div>
+          </div>
+
+          <div class="deal-actions">
+            <button class="btn-sm btn-primary" type="button" aria-label="Add Linen Summer Shirt to cart">Add to Cart</button>
+            <a class="link-quick" href="/product/303" aria-label="View Linen Summer Shirt details">View</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Deal 4: People are buying (social proof) -->
+      <article class="deal-card" role="listitem" data-product-id="304" data-brand="HomeAura">
+        <div class="media">
+          <a class="media-link" href="/product/304" aria-label="View Aurora Ceramic Mug">
+            <img src="https://via.placeholder.com/360x260?text=Aurora+Mug" alt="Aurora ceramic mug" class="deal-image">
+          </a>
+
+          <div class="badges">
+            <span class="badge badge-people">Trending</span>
+          </div>
+
+          <div class="people-buying" aria-hidden="true">🔥 45 people are buying</div>
+        </div>
+
+        <div class="deal-body">
+          <h3 class="deal-title"><a href="/product/304">Aurora Ceramic Mug — 350ml</a></h3>
+
+          <div class="deal-meta">
+            <div class="price">
+              <span class="price-now">₹349</span>
+              <span class="price-old">₹499</span>
+            </div>
+
+            <div class="rating" aria-label="4.8 out of 5 stars">
+              <span class="stars" aria-hidden="true">★★★★★</span> <span class="rating-count">(1,042)</span>
+            </div>
+          </div>
+
+          <div class="deal-actions">
+            <button class="btn-sm btn-primary" type="button" aria-label="Add Aurora Ceramic Mug to cart">Add to Cart</button>
+            <a class="link-quick" href="/product/304" aria-label="View Aurora Ceramic Mug details">View</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Deal 5: High-rating + limited stock -->
+      <article class="deal-card" role="listitem" data-product-id="305" data-brand="CozyLoom">
+        <div class="media">
+          <a class="media-link" href="/product/305" aria-label="View Velvet Throw Pillow">
+            <img src="https://via.placeholder.com/360x260?text=Velvet+Pillow" alt="Velvet throw pillow deep teal" class="deal-image">
+          </a>
+
+          <div class="badges">
+            <span class="badge badge-toprated">Top Rated</span>
+            <span class="badge badge-limited">Only a few left</span>
+          </div>
+
+          <div class="people-buying" aria-hidden="true">🔥 6 people are buying</div>
+        </div>
+
+        <div class="deal-body">
+          <h3 class="deal-title"><a href="/product/305">Velvet Throw Pillow — 45x45cm</a></h3>
+
+          <div class="deal-meta">
+            <div class="price">
+              <span class="price-now">₹1,099</span>
+            </div>
+
+            <div class="rating" aria-label="4.4 out of 5 stars">
+              <span class="stars" aria-hidden="true">★★★★☆</span> <span class="rating-count">(430)</span>
+            </div>
+          </div>
+
+          <div class="stock-row" aria-hidden="true">
+            <div class="stock-text">Only 3 left</div>
+            <div class="stock-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="6" aria-label="Stock remaining 6 percent">
+              <div class="stock-fill" style="width:6%"></div>
+            </div>
+          </div>
+
+          <div class="deal-actions">
+            <button class="btn-sm btn-primary" type="button" aria-label="Add Velvet Throw Pillow to cart">Add to Cart</button>
+            <a class="link-quick" href="/product/305" aria-label="View Velvet Throw Pillow details">View</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="deal-card" role="listitem" data-product-id="306" data-brand="DermaPure">
+        <div class="media">
+          <a class="media-link" href="/product/306" aria-label="View Radiance Glow Face Cream">
+            <img src="https://via.placeholder.com/360x260?text=Radiance+Glow+Cream" alt="Radiance Glow face cream jar" class="deal-image">
+          </a>
+
+          <div class="badges">
+            <span class="badge badge-toprated">Top Rated</span>
+            <span class="badge badge-discount">30% OFF</span>
+          </div>
+
+          <div class="people-buying" aria-hidden="true">🔥 12 people are buying</div>
+        </div>
+
+        <div class="deal-body">
+          <h3 class="deal-title"><a href="/product/306">Radiance Glow Face Cream — 50ml</a></h3>
+
+          <div class="deal-meta">
+            <div class="price">
+              <span class="price-now">₹1,399</span>
+              <span class="price-old">₹1,999</span>
+            </div>
+
+            <div class="rating" aria-label="4.8 out of 5 stars">
+              <span class="stars" aria-hidden="true">★★★★★</span> <span class="rating-count">(1,210)</span>
+            </div>
+          </div>
+
+          <div class="deal-info" aria-hidden="true">
+            <p class="tiny">Rich in antioxidants, deeply hydrating, suitable for all skin types, perfect for daily use.</p>
+          </div>
+
+          <div class="deal-actions">
+            <button class="btn-sm btn-primary" type="button" aria-label="Add Radiance Glow Face Cream to cart">Add to Cart</button>
+            <a class="link-quick" href="/product/306" aria-label="View Radiance Glow Face Cream details">View</a>
+          </div>
+        </div>
+      </article>
+
+    </div> <!-- .deals-grid -->
+  </div> <!-- .container -->
+</section>
+
+
+
+
+
+
+
+
+
+<section class="fade category-featured" data-animate="fade" aria-labelledby="category-featured-heading">
+  <div class="container">
+    <header class="category-header">
+      <h2 id="category-featured-heading">Category-Based Featured Products</h2>
+      <p class="category-sub">Explore top picks from your favorite categories.</p>
+    </header>
+
+    <!-- Featured in Fashion -->
+    <div class="category-block">
+      <h3 class="category-title">Featured in Fashion</h3>
+      <div class="category-grid">
+        <!-- Product 1 -->
+        <article class="cat-product-card" data-product-id="401" data-brand="LuxeBasics">
+          <a href="/product/401" aria-label="View Luxe Cotton Tee">
+            <img src="https://via.placeholder.com/300x300?text=Luxe+Cotton+Tee" alt="Luxe Cotton Tee White" class="cat-product-image">
+          </a>
+          <h4 class="cat-product-name"><a href="/product/401">Luxe Cotton Tee</a></h4>
+          <div class="cat-price">
+            <span class="price-now">₹699</span>
+            <span class="price-old">₹999</span>
+          </div>
+        </article>
+
+        <!-- Product 2 -->
+        <article class="cat-product-card" data-product-id="402" data-brand="AeroMove">
+          <a href="/product/402" aria-label="View AeroFlex Running Shoes">
+            <img src="https://via.placeholder.com/300x300?text=AeroFlex+Shoes" alt="AeroFlex Running Shoes Blue" class="cat-product-image">
+          </a>
+          <h4 class="cat-product-name"><a href="/product/402">AeroFlex Running Shoes</a></h4>
+          <div class="cat-price">
+            <span class="price-now">₹3,499</span>
+            <span class="price-old">₹4,999</span>
+          </div>
+        </article>
+
+        <!-- Product 3 -->
+        <article class="cat-product-card" data-product-id="403" data-brand="DermaPure">
+          <a href="/product/403" aria-label="View HydraGlow Face Serum">
+            <img src="https://via.placeholder.com/300x300?text=HydraGlow+Serum" alt="HydraGlow Face Serum Bottle" class="cat-product-image">
+          </a>
+          <h4 class="cat-product-name"><a href="/product/403">HydraGlow Face Serum</a></h4>
+          <div class="cat-price">
+            <span class="price-now">₹1,799</span>
+            <span class="price-old">₹2,299</span>
+          </div>
+        </article>
+      </div>
+    </div>
+
+    <!-- Featured in Electronics -->
+    <div class="category-block">
+      <h3 class="category-title">Featured in Electronics</h3>
+      <div class="category-grid">
+        <!-- Product 1 -->
+        <article class="cat-product-card" data-product-id="404" data-brand="TechNova">
+          <a href="/product/404" aria-label="View Noise Cancelling Headphones">
+            <img src="https://via.placeholder.com/300x300?text=Headphones" alt="Noise Cancelling Headphones Black" class="cat-product-image">
+          </a>
+          <h4 class="cat-product-name"><a href="/product/404">Noise Cancelling Headphones</a></h4>
+          <div class="cat-price">
+            <span class="price-now">₹4,999</span>
+            <span class="price-old">₹6,499</span>
+          </div>
+        </article>
+
+        <!-- Product 2 -->
+        <article class="cat-product-card" data-product-id="405" data-brand="GizmoTech">
+          <a href="/product/405" aria-label="View Smart Fitness Watch">
+            <img src="https://via.placeholder.com/300x300?text=Smart+Watch" alt="Smart Fitness Watch" class="cat-product-image">
+          </a>
+          <h4 class="cat-product-name"><a href="/product/405">Smart Fitness Watch</a></h4>
+          <div class="cat-price">
+            <span class="price-now">₹2,899</span>
+            <span class="price-old">₹3,999</span>
+          </div>
+        </article>
+      </div>
+    </div>
+
+    <!-- Featured in Home Decor -->
+    <div class="category-block">
+      <h3 class="category-title">Featured in Home Decor</h3>
+      <div class="category-grid">
+        <!-- Product 1 -->
+        <article class="cat-product-card" data-product-id="406" data-brand="CozyLoom">
+          <a href="/product/406" aria-label="View Velvet Throw Pillow">
+            <img src="https://via.placeholder.com/300x300?text=Velvet+Pillow" alt="Velvet Throw Pillow Teal" class="cat-product-image">
+          </a>
+          <h4 class="cat-product-name"><a href="/product/406">Velvet Throw Pillow</a></h4>
+          <div class="cat-price">
+            <span class="price-now">₹1,099</span>
+            <span class="price-old">₹1,399</span>
+          </div>
+        </article>
+
+        <!-- Product 2 -->
+        <article class="cat-product-card" data-product-id="407" data-brand="HomeAura">
+          <a href="/product/407" aria-label="View Aurora Ceramic Mug">
+            <img src="https://via.placeholder.com/300x300?text=Ceramic+Mug" alt="Aurora Ceramic Mug" class="cat-product-image">
+          </a>
+          <h4 class="cat-product-name"><a href="/product/407">Aurora Ceramic Mug</a></h4>
+          <div class="cat-price">
+            <span class="price-now">₹349</span>
+            <span class="price-old">₹499</span>
+          </div>
+        </article>
+      </div>
+    </div>
+
+    <!-- Featured in Beauty -->
+    <div class="category-block">
+      <h3 class="category-title">Featured in Beauty</h3>
+      <div class="category-grid">
+        <!-- Product 1 -->
+        <article class="cat-product-card" data-product-id="408" data-brand="DermaPure">
+          <a href="/product/408" aria-label="View Radiance Glow Face Cream">
+            <img src="https://via.placeholder.com/300x300?text=Face+Cream" alt="Radiance Glow Face Cream Jar" class="cat-product-image">
+          </a>
+          <h4 class="cat-product-name"><a href="/product/408">Radiance Glow Face Cream</a></h4>
+          <div class="cat-price">
+            <span class="price-now">₹1,399</span>
+            <span class="price-old">₹1,999</span>
+          </div>
+        </article>
+
+        <!-- Product 2 -->
+        <article class="cat-product-card" data-product-id="409" data-brand="GlowSkin">
+          <a href="/product/409" aria-label="View Brightening Serum">
+            <img src="https://via.placeholder.com/300x300?text=Brightening+Serum" alt="Brightening Serum Bottle" class="cat-product-image">
+          </a>
+          <h4 class="cat-product-name"><a href="/product/409">Brightening Serum</a></h4>
+          <div class="cat-price">
+            <span class="price-now">₹1,099</span>
+            <span class="price-old">₹1,499</span>
+          </div>
+        </article>
+      </div>
+    </div>
+
+  </div> <!-- container -->
+</section>
+
+<section class="slide" data-animate="slide">Slide Box</section>
+
+
+
+
+
+
+
+
+
+<!-- <section class="jump" data-animate="jump">Jump Box</section>
+
+<section class="fade" data-animate="fade">Fade In Box</section>
+
+<section class="slide" data-animate="slide">Slide Box</section> -->
+
+
+
+
+
+
+
+
+<footer class="footer">
+  <div class="footer-container">
+
+    <div class="footer-about">
+      <a class="brand" href="./404.html" title="Hari IT Solutions">
+        <img src="./bc logo.webp" alt="Hari IT logo" width="40" height="40">
+        <div class="brand-title">
+          <span class="title">STACKLY</span>
+        </div>
+      </a>
+
+      <div>
+        <h3 class="footer-title">About Us</h3>
+        <p class="footer-text">We provide the best products at the best prices. Your satisfaction is our priority.</p>
+        <div class="footer-social">
+          <a href="./404.html" class="social-icon">
+            <img src="./facebook (1).webp" alt="">
+          </a>
+          <a href="./404.html" class="social-icon">
+            <img src="./twitter (1).webp" alt="">
+          </a>
+          <a href="./404.html" class="social-icon">
+            <img src="./instagram (1).webp" alt="">
+          </a>
+          <a href="./404.html" class="social-icon">
+            <img src="./linkedin (1).webp" alt="">
+          </a>
+        </div>
+      </div>
+      
+    </div>
+
+    <div class="footer-links">
+      <h3 class="footer-title">Quick Links</h3>
+      <ul class="footer-list">
+        <li><a href="./top.html">Top Categories</a></li>
+        <li><a href="./product.html">Featured Products</a></li>
+        <li><a href="testimonial.html">Customer Testimonials</a></li>
+        <li><a href="./dashboard.html">DashBoard</a></li>
+        <li><a href="./log.html">LogIn</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-contact">
+      <h3 class="footer-title">Contact</h3>
+      <p class="footer-text">123 E-Commerce St, City, Country</p>
+      <p class="footer-text mail">Email:support@ecommerce.com</p>
+      <p class="footer-text">Phone: +123 456 7890</p>
+      <!-- <div class="footer-newsletter">
+        <input type="email" placeholder="Your email" class="newsletter-input">
+        <button class="newsletter-btn">Subscribe</button>
+      </div> -->
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2025 E-Commerce. All Rights Reserved.</p>
+  </div>
+</footer>
+
+
+<script src="./script.js"></script>
+</body>
+</html>

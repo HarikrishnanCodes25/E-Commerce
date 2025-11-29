@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customer Dashboard</title>
+  <link rel="stylesheet" href="./dashboard.css">
+</head>
+<body>
+
+<!-- Dashboard Wrapper -->
+<div class="dashboard">
+
+  <!-- Sidebar Navigation -->
+  <aside class="sidebar">
+    <div class="sidebar-logo">
+      <h2>ShopMate</h2>
+    </div>
+    <nav class="sidebar-nav">
+      <ul>
+        <li><a href="#" class="active">Dashboard</a></li>
+        <li><a href="#">Orders</a></li>
+        <li><a href="#">Wishlist</a></li>
+        <li><a href="#">Account Details</a></li>
+        <li><a href="#">Notifications</a></li>
+        <li><a href="#">Logout</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="main-content">
+
+    <!-- Header / Hero -->
+    <header class="dashboard-header">
+      <h1>Welcome, Emily Watson</h1>
+      <p>Here's your account overview and recent activity.</p>
+    </header>
+
+    <!-- Account Summary / Stats -->
+    <section class="account-summary">
+      <div class="stat-card">
+        <h3>Total Orders</h3>
+        <p>14</p>
+      </div>
+      <div class="stat-card">
+        <h3>Pending Deliveries</h3>
+        <p>2</p>
+      </div>
+      <div class="stat-card">
+        <h3>Wishlist Items</h3>
+        <p>8</p>
+      </div>
+      <div class="stat-card">
+        <h3>Account Balance</h3>
+        <p>$125.50</p>
+      </div>
+    </section>
+
+    <!-- Recent Orders Table -->
+    <section class="recent-orders">
+      <h2>Recent Orders</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Order ID</th>
+            <th>Product</th>
+            <th>Date</th>
+            <th>Status</th>
+            <th>Total</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>#1023</td>
+            <td>Cozy Wool Sweater</td>
+            <td>Nov 12, 2025</td>
+            <td>Delivered</td>
+            <td>$49.99</td>
+          </tr>
+          <tr>
+            <td>#1024</td>
+            <td>Bluetooth Headphones</td>
+            <td>Nov 10, 2025</td>
+            <td>Shipped</td>
+            <td>$79.99</td>
+          </tr>
+          <tr>
+            <td>#1025</td>
+            <td>Ceramic Home Vase</td>
+            <td>Nov 8, 2025</td>
+            <td>Processing</td>
+            <td>$25.00</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Wishlist / Saved Items -->
+    <section class="wishlist-items">
+      <h2>Your Wishlist</h2>
+      <div class="wishlist-grid">
+        <div class="wishlist-card">
+          <img src="https://via.placeholder.com/150" alt="Product Image">
+          <p>Cozy Wool Sweater</p>
+          <span>$49.99</span>
+        </div>
+        <div class="wishlist-card">
+          <img src="https://via.placeholder.com/150" alt="Product Image">
+          <p>Wireless Headphones</p>
+          <span>$79.99</span>
+        </div>
+        <div class="wishlist-card">
+          <img src="https://via.placeholder.com/150" alt="Product Image">
+          <p>Ceramic Vase</p>
+          <span>$25.00</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Notifications / Alerts -->
+    <section class="notifications">
+      <h2>Notifications</h2>
+      <ul>
+        <li>Your order #1024 has been shipped.</li>
+        <li>New discount on Cozy Wool Sweater – 20% off!</li>
+        <li>Your wishlist item Ceramic Vase is back in stock.</li>
+      </ul>
+    </section>
+
+  </main>
+</div>
+
+</body>
+</html>

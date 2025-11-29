@@ -1,0 +1,228 @@
+/* Dashboard Wrapper */
+.dashboard {
+  display: flex;
+  min-height: 100vh;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background-color: #f7f9fc;
+  color: #01173d;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 250px;
+  background-color: #01173d;
+  color: #ffffff;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-logo h2 {
+  margin: 0 0 40px 0;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.sidebar-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar-nav ul li {
+  margin-bottom: 16px;
+}
+
+.sidebar-nav ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 16px;
+  display: block;
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: background 0.3s ease;
+}
+
+.sidebar-nav ul li a.active,
+.sidebar-nav ul li a:hover {
+  background-color: #0247a3;
+}
+
+/* Main Content */
+.main-content {
+  flex: 1;
+  padding: 40px 32px;
+}
+
+/* Dashboard Header / Hero */
+.dashboard-header h1 {
+  font-size: 32px;
+  margin-bottom: 8px;
+}
+
+.dashboard-header p {
+  font-size: 16px;
+  color: #555555;
+}
+
+/* Account Summary / Stats */
+.account-summary {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin: 40px 0;
+}
+
+.stat-card {
+  background-color: #ffffff;
+  padding: 24px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.stat-card h3 {
+  margin-bottom: 12px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.stat-card p {
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0;
+}
+
+/* Recent Orders Table */
+.recent-orders {
+  margin-bottom: 40px;
+}
+
+.recent-orders h2 {
+  font-size: 24px;
+  margin-bottom: 16px;
+}
+
+.recent-orders table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.recent-orders th, .recent-orders td {
+  text-align: left;
+  padding: 12px 16px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.recent-orders th {
+  background-color: #f0f0f0;
+}
+
+/* Wishlist / Saved Items */
+.wishlist-items h2 {
+  font-size: 24px;
+  margin-bottom: 16px;
+}
+
+.wishlist-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.wishlist-card {
+  background-color: #ffffff;
+  padding: 16px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.wishlist-card img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 8px;
+}
+
+.wishlist-card p {
+  margin: 0 0 4px 0;
+  font-weight: 600;
+}
+
+.wishlist-card span {
+  color: #0247a3;
+  font-weight: 700;
+}
+
+/* Notifications */
+.notifications h2 {
+  font-size: 24px;
+  margin-bottom: 16px;
+}
+
+.notifications ul {
+  list-style: disc;
+  padding-left: 20px;
+}
+
+.notifications ul li {
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: #555555;
+}
+
+/* Media Query <= 768px */
+@media (max-width: 768px) {
+  .dashboard {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    flex-direction: row;
+    overflow-x: auto;
+    padding: 10px;
+  }
+
+  .sidebar-logo {
+    display: none;
+  }
+
+  .sidebar-nav ul {
+    display: flex;
+    gap: 12px;
+  }
+
+  .sidebar-nav ul li {
+    margin-bottom: 0;
+  }
+
+  .main-content {
+    padding: 20px 16px;
+  }
+
+  .account-summary {
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+
+  .wishlist-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .recent-orders th, .recent-orders td {
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+
+  .dashboard-header h1 {
+    font-size: 24px;
+  }
+
+  .dashboard-header p {
+    font-size: 14px;
+  }
+}
