@@ -12,7 +12,7 @@ html {
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  background-color: #f6f7fb;
+  background-color:rgb(1, 23, 61);
   color: #111827;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -48,11 +48,12 @@ body {
 }
 
 .auth-brand div button{
-  background-color: rgb(226, 33, 28);
+  background-color: white;
   border: none;
   padding: 5px 10px;
   margin-top: 10px;
-  color: white;
+  color: rgb(1, 23, 61);
+  font-weight: bold;
 }
 
 .logo {
@@ -72,7 +73,7 @@ body {
   margin: 0;
   font-size: 28px;
   font-weight: 700;
-  color: rgb(226, 33, 28);
+  color:white;
 }
 
 .brand-lead {
@@ -113,12 +114,12 @@ body {
 
 .tab.active {
   background: #eef2ff;
-  color: rgb(226, 33, 28);
+  color:rgb(1, 23, 61);
 }
 
 /* banner */
 .error-banner {
-  background-color: rgb(226, 33, 28);
+  background-color:rgb(53, 118, 231);
   border: 1px solid #fecaca;
   color: white;
   padding: 10px;
@@ -200,7 +201,7 @@ input:focus {
 }
 
 .btn.primary {
-  background-color: rgb(226, 33, 28);
+  background-color: rgb(1, 23, 61);
   color: #fff;
 }
 

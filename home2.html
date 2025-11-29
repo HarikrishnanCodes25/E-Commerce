@@ -5,13 +5,13 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <link rel="icon" href="./bc logo.webp">
   <title>E Commerce</title>
-  <link rel="stylesheet" href="./product.css">
+  <link rel="stylesheet" href="./home2.css">
 </head>
 <body>
 
 <header class="header" id="site-header">
   <div class="right">
-    <a class="brand" href="./index.html" title="Hari IT Solutions">
+    <a class="brand" href="./home2.html" title="Hari IT Solutions">
       <img src="./bc logo.webp" alt="Hari IT logo" width="40" height="40">
       <div class="brand-title">
         <span class="title">STACKLY</span>
@@ -28,13 +28,13 @@
           <li class="dropdown">
             <a href="./home2.html" aria-haspopup="true" aria-expanded="false">Home ▾</a>
             <ul class="dropdown-menu">
-              <li><a href="./index.html">Home 2</a></li>
+              <li><a href="./index.html">Home 1</a></li>
             </ul>
           </li>
-          <li><a href="./top.html">Event Collection</a></li>
+          <li><a href="./event.html">Event Collection</a></li>
           <!-- <li><a href="./finance.html">Top Categories</a></li> -->
-          <li><a href="./product.html">Fashion Quiz</a></li>
-          <li><a href="./testimonial.html">Loyalty Rewards</a></li>
+          <li><a href="./fashion.html">Fashion Quiz</a></li>
+          <li><a href="./rewards.html">Loyalty Rewards</a></li>
           <!-- <li><a href="./dashboard.html">DashBoard</a></li> -->
         </ul>
       </div>
@@ -52,12 +52,753 @@
 
 
 
-<section class="jump" data-animate="jump">Jump Box</section>
+<section class="jump page-header" data-animate="jump">
+  <div class="header-container">
+    <h1 class="header-title">All Products</h1>
+    <p class="header-desc">Discover our latest collection of products curated just for you.</p>
+    <img class="header-img" src="https://via.placeholder.com/150" alt="Hero illustration">
+  </div>
+</section>
 
-<section class="fade" data-animate="fade">Fade In Box</section>
 
-<section class="slide" data-animate="slide">Slide Box</section>
 
+
+
+
+
+
+<section class="fade flash-sale" data-animate="fade">
+  <div class="flash-container">
+    <h2 class="flash-title">Limited Time Offers!</h2>
+    <p class="flash-desc">Hurry up! Grab your favorite products before the deal ends.</p>
+    
+    <div class="countdown">
+      <div class="time-box">
+        <span class="time" id="days">00</span>
+        <span class="label">Days</span>
+      </div>
+      <div class="time-box">
+        <span class="time" id="hours">00</span>
+        <span class="label">Hours</span>
+      </div>
+      <div class="time-box">
+        <span class="time" id="minutes">00</span>
+        <span class="label">Minutes</span>
+      </div>
+      <div class="time-box">
+        <span class="time" id="seconds">00</span>
+        <span class="label">Seconds</span>
+      </div>
+    </div>
+
+    <a href="#" class="shop-btn">Shop Now</a>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+<section class="slide product-categories" data-animate="slide">
+  <div class="categories-container">
+    <h2 class="categories-title">Shop by Use Case</h2>
+    <div class="categories-grid">
+      <div class="category-card">
+        <img src="https://via.placeholder.com/200" alt="Work From Home Essentials">
+        <h3 class="category-name">Work From Home Essentials</h3>
+      </div>
+      <div class="category-card">
+        <img src="https://via.placeholder.com/200" alt="Fitness Gear">
+        <h3 class="category-name">Fitness Gear</h3>
+      </div>
+      <div class="category-card">
+        <img src="https://via.placeholder.com/200" alt="Gifting Ideas">
+        <h3 class="category-name">Gifting Ideas</h3>
+      </div>
+      <div class="category-card">
+        <img src="https://via.placeholder.com/200" alt="Travel Accessories">
+        <h3 class="category-name">Travel Accessories</h3>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+<section class="jump customer-favorites" data-animate="jump">
+  <div class="favorites-container">
+    <h2 id="favorites-heading" class="favorites-title">Customer Favorites</h2>
+    <p class="favorites-desc">Top picks this month — chosen by customers for quality, value, and stellar reviews.</p>
+
+    <div class="favorites-grid" role="list">
+      <!-- Product 1 -->
+      <article class="product-card" role="listitem" aria-label="Wireless Noise-Cancelling Headphones">
+        <div class="card-media">
+          <span class="badge">Best Seller</span>
+          <img
+            loading="lazy"
+            src="https://via.placeholder.com/400x400?text=Wireless+Headphones"
+            alt="Wireless Noise-Cancelling Headphones"
+            class="product-img"
+            width="400"
+            height="400"
+          >
+        </div>
+
+        <div class="card-body">
+          <h3 class="product-name">Wireless Noise-Cancelling Headphones</h3>
+          <p class="product-short">Comfort fit, 40h battery, Bluetooth 5.3 — ideal for long workdays & travel.</p>
+
+          <div class="product-meta">
+            <div class="rating" aria-hidden="true">★★★★★</div>
+            <div class="reviews">(1,245 reviews)</div>
+            <div class="sold">• 8,420 sold</div>
+          </div>
+
+          <div class="price-row">
+            <div class="price-current">$99.99</div>
+            <div class="price-old">$149.99</div>
+            <div class="discount">33% off</div>
+          </div>
+
+          <div class="card-actions">
+            <button class="btn primary" aria-label="Add Wireless Headphones to cart">Add to cart</button>
+            <button class="btn secondary" aria-label="Quick view Wireless Headphones">Quick view</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Product 2 -->
+      <article class="product-card" role="listitem" aria-label="Smart Fitness Watch">
+        <div class="card-media">
+          <span class="badge badge-sale">20% OFF</span>
+          <img
+            loading="lazy"
+            src="https://via.placeholder.com/400x400?text=Smart+Watch"
+            alt="Smart Fitness Watch"
+            class="product-img"
+            width="400"
+            height="400"
+          >
+        </div>
+
+        <div class="card-body">
+          <h3 class="product-name">Smart Fitness Watch</h3>
+          <p class="product-short">Heart-rate, SpO₂, GPS tracking, sleep coaching — perfect for everyday fitness.</p>
+
+          <div class="product-meta">
+            <div class="rating" aria-hidden="true">★★★★★</div>
+            <div class="reviews">(2,132 reviews)</div>
+            <div class="sold">• 12,300 sold</div>
+          </div>
+
+          <div class="price-row">
+            <div class="price-current">$119.99</div>
+            <div class="price-old">$149.99</div>
+            <div class="discount">Save $30</div>
+          </div>
+
+          <div class="card-actions">
+            <button class="btn primary" aria-label="Add Smart Watch to cart">Add to cart</button>
+            <button class="btn tertiary" aria-label="View Smart Watch details">View</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Product 3 -->
+      <article class="product-card" role="listitem" aria-label="Ergonomic Mesh Office Chair">
+        <div class="card-media">
+          <span class="badge">Top Rated</span>
+          <img
+            loading="lazy"
+            src="https://via.placeholder.com/400x400?text=Ergonomic+Chair"
+            alt="Ergonomic Mesh Office Chair"
+            class="product-img"
+            width="400"
+            height="400"
+          >
+        </div>
+
+        <div class="card-body">
+          <h3 class="product-name">Ergonomic Mesh Office Chair</h3>
+          <p class="product-short">Adjustable lumbar support, breathable mesh — work comfortable all day.</p>
+
+          <div class="product-meta">
+            <div class="rating" aria-hidden="true">★★★★★</div>
+            <div class="reviews">(952 reviews)</div>
+            <div class="sold">• 3,780 sold</div>
+          </div>
+
+          <div class="price-row">
+            <div class="price-current">$249.00</div>
+            <div class="price-old"></div>
+            <div class="discount">Free shipping</div>
+          </div>
+
+          <div class="card-actions">
+            <button class="btn primary" aria-label="Add Ergonomic Chair to cart">Add to cart</button>
+            <button class="btn tertiary" aria-label="View Ergonomic Chair details">View</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Product 4 -->
+      <article class="product-card" role="listitem" aria-label="Eco Yoga Mat">
+        <div class="card-media">
+          <span class="badge badge-limited">Low Stock</span>
+          <img
+            loading="lazy"
+            src="https://via.placeholder.com/400x400?text=Yoga+Mat"
+            alt="Eco Yoga Mat"
+            class="product-img"
+            width="400"
+            height="400"
+          >
+        </div>
+
+        <div class="card-body">
+          <h3 class="product-name">Eco Yoga Mat</h3>
+          <p class="product-short">Non-slip textured surface, extra cushioning — sustainable cork blend.</p>
+
+          <div class="product-meta">
+            <div class="rating" aria-hidden="true">★★★★☆</div>
+            <div class="reviews">(581 reviews)</div>
+            <div class="sold">• 5,210 sold</div>
+          </div>
+
+          <div class="price-row">
+            <div class="price-current">$29.99</div>
+            <div class="price-old">$39.99</div>
+            <div class="discount">25% off</div>
+          </div>
+
+          <div class="card-actions">
+            <button class="btn primary" aria-label="Add Eco Yoga Mat to cart">Add to cart</button>
+            <button class="btn secondary" aria-label="Quick view Eco Yoga Mat">Quick view</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Product 5 -->
+      <article class="product-card" role="listitem" aria-label="Compact Portable Blender">
+        <div class="card-media">
+          <span class="badge">Popular Gift</span>
+          <img
+            loading="lazy"
+            src="https://via.placeholder.com/400x400?text=Portable+Blender"
+            alt="Compact Portable Blender"
+            class="product-img"
+            width="400"
+            height="400"
+          >
+        </div>
+
+        <div class="card-body">
+          <h3 class="product-name">Compact Portable Blender</h3>
+          <p class="product-short">USB-C rechargeable, travel-size — smoothies on the go.</p>
+
+          <div class="product-meta">
+            <div class="rating" aria-hidden="true">★★★★☆</div>
+            <div class="reviews">(1,020 reviews)</div>
+            <div class="sold">• 9,010 sold</div>
+          </div>
+
+          <div class="price-row">
+            <div class="price-current">$39.50</div>
+            <div class="price-old">$49.99</div>
+            <div class="discount">20% off</div>
+          </div>
+
+          <div class="card-actions">
+            <button class="btn primary" aria-label="Add Portable Blender to cart">Add to cart</button>
+            <button class="btn tertiary" aria-label="View Portable Blender details">View</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Product 6 -->
+      <article class="product-card" role="listitem" aria-label="Wireless Charging Stand">
+        <div class="card-media">
+          <span class="badge badge-stock">Limited</span>
+          <img
+            loading="lazy"
+            src="https://via.placeholder.com/400x400?text=Charging+Stand"
+            alt="Wireless Charging Stand"
+            class="product-img"
+            width="400"
+            height="400"
+          >
+        </div>
+
+        <div class="card-body">
+          <h3 class="product-name">Wireless Charging Stand</h3>
+          <p class="product-short">Fast charge compatible phones, tilt stand for video calls while charging.</p>
+
+          <div class="product-meta">
+            <div class="rating" aria-hidden="true">★★★★★</div>
+            <div class="reviews">(688 reviews)</div>
+            <div class="sold">• 4,560 sold</div>
+          </div>
+
+          <div class="price-row">
+            <div class="price-current">$34.99</div>
+            <div class="price-old"></div>
+            <div class="discount">Free returns</div>
+          </div>
+
+          <div class="card-actions">
+            <button class="btn primary" aria-label="Add Charging Stand to cart">Add to cart</button>
+            <button class="btn secondary" aria-label="Quick view Charging Stand">Quick view</button>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+ 
+<section class="fade bestsellers" data-animate="fade" aria-labelledby="bestsellers-heading">
+  <div class="container">
+    <h2 id="bestsellers-heading" class="section-title">Bestsellers by Category</h2>
+    <p class="section-sub">Top-selling products grouped by category — hand-picked from our customers' favorites.</p>
+
+    <!-- Category: Electronics -->
+    <div class="category-block" id="cat-electronics" aria-labelledby="cat-electronics-title">
+      <h3 id="cat-electronics-title" class="cat-title">Electronics</h3>
+      <div class="products-grid" role="list">
+        <!-- Card 1 -->
+        <article class="prod-card" role="listitem" aria-label="Wireless Earbuds Pro">
+          <div class="media">
+            <span class="badge">Bestseller</span>
+            <img src="https://via.placeholder.com/360x360?text=Earbuds+Pro"
+                 alt="Wireless Earbuds Pro"
+                 loading="lazy"
+                 class="prod-img" width="360" height="360">
+          </div>
+          <div class="prod-body">
+            <h4 class="prod-name">Wireless Earbuds Pro</h4>
+            <div class="meta">
+              <span class="stars" aria-hidden="true">★★★★★</span>
+              <span class="reviews">(4,812)</span>
+            </div>
+            <div class="price-row">
+              <span class="price-now">$59.99</span>
+              <span class="price-old">$89.99</span>
+            </div>
+            <div class="actions">
+              <button class="btn primary">Add to cart</button>
+              <button class="btn link">View</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="prod-card" role="listitem" aria-label="4K Action Camera">
+          <div class="media">
+            <span class="badge badge-sale">15% OFF</span>
+            <img src="https://via.placeholder.com/360x360?text=Action+Camera"
+                 alt="4K Action Camera"
+                 loading="lazy"
+                 class="prod-img" width="360" height="360">
+          </div>
+          <div class="prod-body">
+            <h4 class="prod-name">4K Action Camera</h4>
+            <div class="meta">
+              <span class="stars" aria-hidden="true">★★★★☆</span>
+              <span class="reviews">(1,982)</span>
+            </div>
+            <div class="price-row">
+              <span class="price-now">$129.00</span>
+              <span class="price-old">$149.99</span>
+            </div>
+            <div class="actions">
+              <button class="btn primary">Add to cart</button>
+              <button class="btn link">View</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="prod-card" role="listitem" aria-label="Wireless Charging Pad">
+          <div class="media">
+            <img src="https://via.placeholder.com/360x360?text=Charging+Pad"
+                 alt="Wireless Charging Pad"
+                 loading="lazy"
+                 class="prod-img" width="360" height="360">
+          </div>
+          <div class="prod-body">
+            <h4 class="prod-name">Wireless Charging Pad</h4>
+            <div class="meta">
+              <span class="stars" aria-hidden="true">★★★★★</span>
+              <span class="reviews">(3,104)</span>
+            </div>
+            <div class="price-row">
+              <span class="price-now">$24.99</span>
+              <span class="price-old"></span>
+            </div>
+            <div class="actions">
+              <button class="btn primary">Add to cart</button>
+              <button class="btn link">View</button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+
+    <!-- Category: Fashion -->
+    <div class="category-block" id="cat-fashion" aria-labelledby="cat-fashion-title">
+      <h3 id="cat-fashion-title" class="cat-title">Fashion</h3>
+      <div class="products-grid" role="list">
+        <article class="prod-card" role="listitem" aria-label="Classic Leather Wallet">
+          <div class="media">
+            <span class="badge">Top Rated</span>
+            <img src="https://via.placeholder.com/360x360?text=Leather+Wallet"
+                 alt="Classic Leather Wallet"
+                 loading="lazy"
+                 class="prod-img" width="360" height="360">
+          </div>
+          <div class="prod-body">
+            <h4 class="prod-name">Classic Leather Wallet</h4>
+            <div class="meta">
+              <span class="stars" aria-hidden="true">★★★★★</span>
+              <span class="reviews">(2,210)</span>
+            </div>
+            <div class="price-row">
+              <span class="price-now">$39.00</span>
+              <span class="price-old">$59.00</span>
+            </div>
+            <div class="actions">
+              <button class="btn primary">Add to cart</button>
+              <button class="btn link">View</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="prod-card" role="listitem" aria-label="Lightweight Puffer Jacket">
+          <div class="media">
+            <span class="badge badge-sale">30% OFF</span>
+            <img src="https://via.placeholder.com/360x360?text=Puffer+Jacket"
+                 alt="Lightweight Puffer Jacket"
+                 loading="lazy"
+                 class="prod-img" width="360" height="360">
+          </div>
+          <div class="prod-body">
+            <h4 class="prod-name">Lightweight Puffer Jacket</h4>
+            <div class="meta">
+              <span class="stars" aria-hidden="true">★★★★☆</span>
+              <span class="reviews">(1,512)</span>
+            </div>
+            <div class="price-row">
+              <span class="price-now">$69.00</span>
+              <span class="price-old">$99.00</span>
+            </div>
+            <div class="actions">
+              <button class="btn primary">Add to cart</button>
+              <button class="btn link">View</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="prod-card" role="listitem" aria-label="Everyday Sneakers">
+          <div class="media">
+            <img src="https://via.placeholder.com/360x360?text=Sneakers"
+                 alt="Everyday Sneakers"
+                 loading="lazy"
+                 class="prod-img" width="360" height="360">
+          </div>
+          <div class="prod-body">
+            <h4 class="prod-name">Everyday Sneakers</h4>
+            <div class="meta">
+              <span class="stars" aria-hidden="true">★★★★★</span>
+              <span class="reviews">(4,020)</span>
+            </div>
+            <div class="price-row">
+              <span class="price-now">$79.99</span>
+              <span class="price-old"></span>
+            </div>
+            <div class="actions">
+              <button class="btn primary">Add to cart</button>
+              <button class="btn link">View</button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+
+    <!-- Category: Home & Kitchen -->
+    <div class="category-block" id="cat-home" aria-labelledby="cat-home-title">
+      <h3 id="cat-home-title" class="cat-title">Home &amp; Kitchen</h3>
+      <div class="products-grid" role="list">
+        <article class="prod-card" role="listitem" aria-label="Air Fryer 3.5L">
+          <div class="media">
+            <span class="badge">Hot</span>
+            <img src="https://via.placeholder.com/360x360?text=Air+Fryer"
+                 alt="Air Fryer 3.5L"
+                 loading="lazy"
+                 class="prod-img" width="360" height="360">
+          </div>
+          <div class="prod-body">
+            <h4 class="prod-name">Air Fryer 3.5L</h4>
+            <div class="meta">
+              <span class="stars" aria-hidden="true">★★★★☆</span>
+              <span class="reviews">(3,305)</span>
+            </div>
+            <div class="price-row">
+              <span class="price-now">$89.00</span>
+              <span class="price-old">$129.00</span>
+            </div>
+            <div class="actions">
+              <button class="btn primary">Add to cart</button>
+              <button class="btn link">View</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="prod-card" role="listitem" aria-label="Cordless Handheld Vacuum">
+          <div class="media">
+            <span class="badge badge-stock">Low Stock</span>
+            <img src="https://via.placeholder.com/360x360?text=Handheld+Vacuum"
+                 alt="Cordless Handheld Vacuum"
+                 loading="lazy"
+                 class="prod-img" width="360" height="360">
+          </div>
+          <div class="prod-body">
+            <h4 class="prod-name">Cordless Handheld Vacuum</h4>
+            <div class="meta">
+              <span class="stars" aria-hidden="true">★★★★★</span>
+              <span class="reviews">(1,188)</span>
+            </div>
+            <div class="price-row">
+              <span class="price-now">$59.00</span>
+              <span class="price-old">$79.00</span>
+            </div>
+            <div class="actions">
+              <button class="btn primary">Add to cart</button>
+              <button class="btn link">View</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="prod-card" role="listitem" aria-label="Stainless Steel Knife Set">
+          <div class="media">
+            <img src="https://via.placeholder.com/360x360?text=Knife+Set"
+                 alt="Stainless Steel Knife Set"
+                 loading="lazy"
+                 class="prod-img" width="360" height="360">
+          </div>
+          <div class="prod-body">
+            <h4 class="prod-name">Stainless Steel Knife Set</h4>
+            <div class="meta">
+              <span class="stars" aria-hidden="true">★★★★☆</span>
+              <span class="reviews">(760)</span>
+            </div>
+            <div class="price-row">
+              <span class="price-now">$69.99</span>
+              <span class="price-old"></span>
+            </div>
+            <div class="actions">
+              <button class="btn primary">Add to cart</button>
+              <button class="btn link">View</button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+<section class="slide how-it-works" data-animate="slide" aria-labelledby="how-heading">
+  <div class="how-container">
+    <h2 id="how-heading" class="how-title">How it works</h2>
+    <p class="how-sub">Fast, simple shopping — from order to doorstep. Here’s a quick guide explaining ordering, shipping, and returns.</p>
+
+    <ul class="how-grid" role="list">
+      <li class="how-step" role="listitem">
+        <div class="step-icon" aria-hidden="true">
+          <!-- simple cart SVG -->
+          <svg width="44" height="44" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M3 3h2l.9 2M7 13h10l3-7H6.1" stroke="#01173d" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="10" cy="20" r="1" fill="#01173d"/>
+            <circle cx="18" cy="20" r="1" fill="#01173d"/>
+          </svg>
+        </div>
+
+        <div class="step-body">
+          <h3 class="step-title">1. Place your order</h3>
+          <p class="step-desc">Choose products, select variants, and checkout with secure payment options. We confirm your order by email within minutes.</p>
+        </div>
+      </li>
+
+      <li class="how-step" role="listitem">
+        <div class="step-icon" aria-hidden="true">
+          <!-- truck SVG -->
+          <svg width="44" height="44" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M3 7h11v8H3z" stroke="#01173d" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M14 12h4l3 3v-3" stroke="#01173d" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="7" cy="18" r="1.3" fill="#01173d"/>
+            <circle cx="18" cy="18" r="1.3" fill="#01173d"/>
+          </svg>
+        </div>
+
+        <div class="step-body">
+          <h3 class="step-title">2. Fast shipping</h3>
+          <p class="step-desc">Standard (3–7 business days) and express options are available. Track your shipment with a tracking link sent by email/SMS.</p>
+        </div>
+      </li>
+
+      <li class="how-step" role="listitem">
+        <div class="step-icon" aria-hidden="true">
+          <!-- refresh/returns SVG -->
+          <svg width="44" height="44" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M21 12a9 9 0 10-3.2 6.6L21 13" stroke="#01173d" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M21 7v5h-5" stroke="#01173d" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+
+        <div class="step-body">
+          <h3 class="step-title">3. Easy returns & exchange</h3>
+          <p class="step-desc">Changed your mind? Return within 15 days in original condition. Start a return from your account or contact support for an RMA.</p>
+        </div>
+      </li>
+    </ul>
+
+    <div class="how-note">
+      <strong>Pro tip:</strong> Sign up for order updates and faster support via live chat.
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+<section class="jump gifts-members" data-animate="jump">
+  <div class="gm-container">
+    <div class="gm-header">
+      <div>
+        <h2 id="gifts-heading" class="gm-title">Gift Cards & Membership</h2>
+        <p class="gm-sub">Give the perfect gift — or unlock members-only perks like free shipping, early access, and exclusive discounts.</p>
+      </div>
+      <div class="gm-cta-note" aria-hidden="true">Popular →</div>
+    </div>
+
+    <div class="gm-grid" role="list">
+      <!-- Gift card column -->
+      <div class="gm-card gift-card" role="listitem" aria-label="Gift cards">
+        <div class="gm-media">
+          <img src="https://via.placeholder.com/520x320?text=Gift+Card" alt="Gift card illustration" loading="lazy" width="520" height="320">
+        </div>
+
+        <div class="gm-body">
+          <h3 class="gm-card-title">Store Gift Cards</h3>
+          <p class="gm-card-desc">Instant delivery by email. Redeem across the store — no expiry.</p>
+
+          <div class="denominations" role="radiogroup" aria-label="Gift card denominations">
+            <label class="denom" aria-checked="false" tabindex="0" role="radio">
+              <input type="radio" name="denom" value="25" hidden>
+              <span class="denom-inner">$25</span>
+            </label>
+            <label class="denom" aria-checked="true" tabindex="0" role="radio">
+              <input type="radio" name="denom" value="50" hidden checked>
+              <span class="denom-inner">$50</span>
+            </label>
+            <label class="denom" aria-checked="false" tabindex="0" role="radio">
+              <input type="radio" name="denom" value="100" hidden>
+              <span class="denom-inner">$100</span>
+            </label>
+            <label class="denom" aria-checked="false" tabindex="0" role="radio">
+              <input type="radio" name="denom" value="custom" hidden>
+              <span class="denom-inner">Custom</span>
+            </label>
+          </div>
+
+          <div class="gm-actions">
+            <a href="#" class="btn primary">Buy Gift Card</a>
+            <a href="#" class="btn link">Send as Email</a>
+          </div>
+
+          <p class="small-note">Tip: Add a personal message during checkout.</p>
+        </div>
+      </div>
+
+      <!-- Membership column -->
+      <div class="gm-card member-card" role="listitem" aria-label="Membership offers">
+        <div class="gm-media gm-media-sm">
+          <img src="https://via.placeholder.com/520x320?text=Membership" alt="Membership perks illustration" loading="lazy" width="520" height="320">
+        </div>
+
+        <div class="gm-body">
+          <h3 class="gm-card-title">Membership — Premium</h3>
+          <p class="gm-card-desc">Subscribe for yearly savings and VIP access.</p>
+
+          <ul class="perks" aria-hidden="false">
+            <li>✔ Free standard shipping (no min.)</li>
+            <li>✔ 10% off sitewide</li>
+            <li>✔ Early access to flash sales</li>
+            <li>✔ Members-only support</li>
+          </ul>
+
+          <div class="price-block">
+            <div class="price-now">₹1,499 / year</div>
+            <div class="price-spark">Save ₹500 vs monthly</div>
+          </div>
+
+          <div class="gm-actions">
+            <a href="#" class="btn primary">Join Premium</a>
+            <a href="#" class="btn tertiary">Try 7-day free</a>
+          </div>
+
+          <div class="promo">
+            <label for="promo-code">Have a promo code?</label>
+            <div class="promo-row">
+              <input id="promo-code" class="promo-input" type="text" placeholder="ENTER CODE">
+              <button class="btn apply">Apply</button>
+            </div>
+          </div>
+
+          <p class="small-note">Auto-renews yearly — cancel anytime from your account.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="gm-footer">
+      <p class="gm-trust">Secure checkout • Instant delivery • 30-day returns</p>
+    </div>
+  </div>
+</section>
+
+<!-- <section class="fade" data-animate="fade">Fade In Box</section>
+
+<section class="slide" data-animate="slide">Slide Box</section> -->
 
 
 
@@ -70,7 +811,7 @@
   <div class="footer-container">
 
     <div class="footer-about">
-      <a class="brand" href="./404.html" title="Hari IT Solutions">
+      <a class="brand" href="./home2.html" title="Hari IT Solutions">
         <img src="./bc logo.webp" alt="Hari IT logo" width="40" height="40">
         <div class="brand-title">
           <span class="title">STACKLY</span>
@@ -101,11 +842,11 @@
     <div class="footer-links">
       <h3 class="footer-title">Quick Links</h3>
       <ul class="footer-list">
-        <li><a href="#">Event Collection</a></li>
-        <li><a href="#">Fashion Quiz</a></li>
-        <li><a href="#">Loyalty Rewards</a></li>
-        <li><a href="#">DashBoard</a></li>
-        <li><a href="#">LogIn</a></li>
+        <li><a href="./event.html">Event Collection</a></li>
+        <li><a href="./fashion.html">Fashion Quiz</a></li>
+        <li><a href="./rewards.html">Loyalty Rewards</a></li>
+        <li><a href="./dashboard.html">DashBoard</a></li>
+        <li><a href="./log.html">LogIn</a></li>
       </ul>
     </div>
 
@@ -128,6 +869,6 @@
 </footer>
 
 
-<script src="./script.js"></script>
+<script src="./home2.js"></script>
 </body>
 </html>

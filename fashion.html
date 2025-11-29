@@ -1,0 +1,464 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="icon" href="./bc logo.webp">
+  <title>E Commerce</title>
+  <link rel="stylesheet" href="./fashion.css">
+</head>
+<body>
+
+<header class="header" id="site-header">
+  <div class="right">
+    <a class="brand" href="./home2.html" title="Hari IT Solutions">
+      <img src="./bc logo.webp" alt="Hari IT logo" width="40" height="40">
+      <div class="brand-title">
+        <span class="title">STACKLY</span>
+      </div>
+    </a>
+
+    <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-controls="main-nav" aria-expanded="false">☰</button>
+  </div>
+
+  <div class="left">
+    <nav id="main-nav" class="navBar" aria-label="Main navigation">
+      <div class="navLinks">
+        <ul class="linkRight">
+          <li class="dropdown">
+            <a href="./home2.html" aria-haspopup="true" aria-expanded="false">Home ▾</a>
+            <ul class="dropdown-menu">
+              <li><a href="./index.html">Home 1</a></li>
+            </ul>
+          </li>
+          <li><a href="./event.html">Event Collection</a></li>
+          <!-- <li><a href="./finance.html">Top Categories</a></li> -->
+          <li><a href="./fashion.html">Fashion Quiz</a></li>
+          <li><a href="./rewards.html">Loyalty Rewards</a></li>
+          <!-- <li><a href="./dashboard.html">DashBoard</a></li> -->
+        </ul>
+      </div>
+    </nav>
+
+    <button class="btn-cta" onclick="location.href='./log.html'">LogIn</button>
+  </div>
+</header>
+
+
+
+
+
+
+
+
+
+<section class="jump quiz-hero" data-animate="jump">
+  <div class="quiz-hero-inner">
+    <h1 class="quiz-title">Find Your Style</h1>
+    <p class="quiz-desc">
+      Take our quick fashion quiz and discover outfits that perfectly match
+      your personality, taste, and lifestyle.
+    </p>
+
+    <a href="#" class="quiz-btn">Start Quiz</a>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+<section class="fade quiz-questions"" data-animate="fade"  aria-label="Fashion quiz questions">
+  <div class="container">
+    <h2 class="section-title">Your Style Preferences</h2>
+
+    <!-- Question 1: Style preference (multiple choice) -->
+    <div class="question" id="q-style">
+      <p class="q-title">1. Style preference</p>
+
+      <div class="options options-inline" role="radiogroup" aria-labelledby="q-style">
+        <label class="option-card">
+          <input type="radio" name="style" value="casual" />
+          <div class="option-content">
+            <img src="https://via.placeholder.com/160x120?text=Casual" alt="Casual outfit" />
+            <span class="option-label">Casual</span>
+          </div>
+        </label>
+
+        <label class="option-card">
+          <input type="radio" name="style" value="party" />
+          <div class="option-content">
+            <img src="https://via.placeholder.com/160x120?text=Party" alt="Party outfit" />
+            <span class="option-label">Party</span>
+          </div>
+        </label>
+
+        <label class="option-card">
+          <input type="radio" name="style" value="formal" />
+          <div class="option-content">
+            <img src="https://via.placeholder.com/160x120?text=Formal" alt="Formal outfit" />
+            <span class="option-label">Formal</span>
+          </div>
+        </label>
+      </div>
+    </div>
+
+    <!-- Question 2: Favorite colors (image swatch multi-select) -->
+    <div class="question" id="q-colors">
+      <p class="q-title">2. Favorite colors</p>
+
+      <div class="options options-grid" role="group" aria-labelledby="q-colors">
+        <label class="swatch">
+          <input type="checkbox" name="color" value="navy" />
+          <span class="swatch-circle" style="background:#01173d;" aria-hidden="true"></span>
+          <span class="swatch-label">Navy</span>
+        </label>
+
+        <label class="swatch">
+          <input type="checkbox" name="color" value="blush" />
+          <span class="swatch-circle" style="background:#f6c6cc;" aria-hidden="true"></span>
+          <span class="swatch-label">Blush</span>
+        </label>
+
+        <label class="swatch">
+          <input type="checkbox" name="color" value="olive" />
+          <span class="swatch-circle" style="background:#8aa153;" aria-hidden="true"></span>
+          <span class="swatch-label">Olive</span>
+        </label>
+
+        <label class="swatch">
+          <input type="checkbox" name="color" value="mustard" />
+          <span class="swatch-circle" style="background:#d7a400;" aria-hidden="true"></span>
+          <span class="swatch-label">Mustard</span>
+        </label>
+      </div>
+    </div>
+
+    <!-- Question 3: Body type (image options) -->
+    <div class="question" id="q-body">
+      <p class="q-title">3. Body type</p>
+
+      <div class="options options-inline" role="radiogroup" aria-labelledby="q-body">
+        <label class="option-card small">
+          <input type="radio" name="body" value="pear" />
+          <div class="option-content">
+            <img src="https://via.placeholder.com/120x100?text=Pear" alt="Pear body" />
+            <span class="option-label">Pear</span>
+          </div>
+        </label>
+
+        <label class="option-card small">
+          <input type="radio" name="body" value="hourglass" />
+          <div class="option-content">
+            <img src="https://via.placeholder.com/120x100?text=Hourglass" alt="Hourglass body" />
+            <span class="option-label">Hourglass</span>
+          </div>
+        </label>
+
+        <label class="option-card small">
+          <input type="radio" name="body" value="rectangle" />
+          <div class="option-content">
+            <img src="https://via.placeholder.com/120x100?text=Rectangle" alt="Rectangle body" />
+            <span class="option-label">Rectangle</span>
+          </div>
+        </label>
+
+        <label class="option-card small">
+          <input type="radio" name="body" value="apple" />
+          <div class="option-content">
+            <img src="https://via.placeholder.com/120x100?text=Apple" alt="Apple body" />
+            <span class="option-label">Apple</span>
+          </div>
+        </label>
+      </div>
+    </div>
+
+    <!-- Question 4: Budget range (slider) -->
+    <div class="question" id="q-budget">
+      <p class="q-title">4. Budget range</p>
+
+      <div class="slider-wrap">
+        <input type="range" name="budget" min="0" max="500" step="25" list="budget-ticks" />
+        <datalist id="budget-ticks">
+          <option value="0"></option>
+          <option value="100"></option>
+          <option value="200"></option>
+          <option value="300"></option>
+          <option value="400"></option>
+          <option value="500"></option>
+        </datalist>
+        <div class="slider-labels">
+          <span>Low</span>
+          <span>Mid</span>
+          <span>High</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Question 5: Preferred patterns (solid, stripes, floral) -->
+    <div class="question" id="q-patterns">
+      <p class="q-title">5. Preferred patterns</p>
+
+      <div class="options options-inline" role="group" aria-labelledby="q-patterns">
+        <label class="pattern-pill">
+          <input type="checkbox" name="pattern" value="solid" />
+          <span class="pill-label">Solid</span>
+        </label>
+
+        <label class="pattern-pill">
+          <input type="checkbox" name="pattern" value="stripes" />
+          <span class="pill-label">Stripes</span>
+        </label>
+
+        <label class="pattern-pill">
+          <input type="checkbox" name="pattern" value="floral" />
+          <span class="pill-label">Floral</span>
+        </label>
+
+        <label class="pattern-pill">
+          <input type="checkbox" name="pattern" value="prints" />
+          <span class="pill-label">Prints</span>
+        </label>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+<section class="slide quiz-progress" data-animate="slide" aria-label="Quiz progress">
+  <div class="progress-inner">
+    <div class="progress-top">
+      <div class="step-counter" aria-live="polite">
+        <span class="current-step">Step</span>
+        <span class="current-num">1</span>
+        <span class="divider">of</span>
+        <span class="total-num">8</span>
+      </div>
+
+      <div class="encourage">
+        Almost there — finish the quiz to get your personalized look!
+      </div>
+    </div>
+
+    <div class="progress-bar-wrap" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="12">
+      <div class="progress-track">
+        <div class="progress-fill" style="width:12%;"></div>
+      </div>
+
+      <ol class="progress-steps" aria-hidden="true">
+        <li class="step active"><span class="dot">1</span></li>
+        <li class="step"><span class="dot">2</span></li>
+        <li class="step"><span class="dot">3</span></li>
+        <li class="step"><span class="dot">4</span></li>
+        <li class="step"><span class="dot">5</span></li>
+        <li class="step"><span class="dot">6</span></li>
+        <li class="step"><span class="dot">7</span></li>
+        <li class="step"><span class="dot">8</span></li>
+      </ol>
+    </div>
+
+    <div class="progress-controls">
+      <button class="btn btn-prev" type="button" disabled aria-disabled="true">Prev</button>
+      <button class="btn btn-next" type="button">Next</button>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+<section class="jump quiz-results" data-animate="jump" aria-label="Quiz results">
+  <div class="results-inner">
+    <div class="result-card" role="region" aria-labelledby="result-title">
+      <div class="result-visual">
+        <img src="https://via.placeholder.com/420x280?text=Chic+Look" alt="Chic outfit example" />
+      </div>
+
+      <div class="result-content">
+        <h2 id="result-title" class="result-title">Chic</h2>
+        <p class="result-sub">You favour polished silhouettes, modern tailoring, and refined details — effortless sophistication is your signature.</p>
+
+        <div class="recommendations">
+          <h3 class="rec-title">Style recommendations</h3>
+
+          <ul class="rec-list" aria-label="Style recommendations">
+            <li class="rec-item">
+              <img class="rec-thumb" src="https://via.placeholder.com/80?text=Blazer" alt="" />
+              <div class="rec-text">
+                <strong>Tailored blazers</strong>
+                <span class="rec-note">Neutral tones, structured fit</span>
+              </div>
+            </li>
+
+            <li class="rec-item">
+              <img class="rec-thumb" src="https://via.placeholder.com/80?text=Slip+Dress" alt="" />
+              <div class="rec-text">
+                <strong>Sleek slip dresses</strong>
+                <span class="rec-note">Minimal accessories, clean lines</span>
+              </div>
+            </li>
+
+            <li class="rec-item">
+              <img class="rec-thumb" src="https://via.placeholder.com/80?text=Loafers" alt="" />
+              <div class="rec-text">
+                <strong>Classic loafers</strong>
+                <span class="rec-note">Comfort meets polish</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="result-ctas">
+          <a class="btn-primary" href="#shop">Shop Looks</a>
+          <button class="btn-secondary" type="button">Retake Quiz</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="more-tips" aria-hidden="false">
+      <p><strong>Quick tip:</strong> Choose one statement piece per outfit to keep looks elevated without overdoing it.</p>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+<section class="fade recommended-products" data-animate="fade" aria-label="Recommended products">
+  <div class="products-inner">
+    <h2 class="products-title">Recommended for You</h2>
+
+    <div class="products-grid">
+      <!-- Product Card -->
+      <div class="product-card">
+        <img src="https://via.placeholder.com/240x300?text=Outfit+1" alt="Outfit 1" class="product-img" />
+        <div class="product-info">
+          <h3 class="product-name">Chic Blazer</h3>
+          <p class="product-price">$120</p>
+          <a href="#shop" class="btn-shop">Shop Now</a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img src="https://via.placeholder.com/240x300?text=Accessory+1" alt="Accessory 1" class="product-img" />
+        <div class="product-info">
+          <h3 class="product-name">Elegant Handbag</h3>
+          <p class="product-price">$85</p>
+          <a href="#shop" class="btn-shop">Shop Now</a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img src="https://via.placeholder.com/240x300?text=Brand+Item+1" alt="Brand Item 1" class="product-img" />
+        <div class="product-info">
+          <h3 class="product-name">Minimal Sneakers</h3>
+          <p class="product-price">$95</p>
+          <a href="#shop" class="btn-shop">Shop Now</a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img src="https://via.placeholder.com/240x300?text=Color+Fav+1" alt="Preferred Color Item" class="product-img" />
+        <div class="product-info">
+          <h3 class="product-name">Navy Dress</h3>
+          <p class="product-price">$110</p>
+          <a href="#shop" class="btn-shop">Shop Now</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- <section class="slide" data-animate="slide">Slide Box</section> -->
+
+
+
+
+
+
+
+<footer class="footer">
+  <div class="footer-container">
+
+    <div class="footer-about">
+      <a class="brand" href="./home2.html" title="Hari IT Solutions">
+        <img src="./bc logo.webp" alt="Hari IT logo" width="40" height="40">
+        <div class="brand-title">
+          <span class="title">STACKLY</span>
+        </div>
+      </a>
+
+      <div>
+        <h3 class="footer-title">About Us</h3>
+        <p class="footer-text">We provide the best products at the best prices. Your satisfaction is our priority.</p>
+        <div class="footer-social">
+          <a href="./404.html" class="social-icon">
+            <img src="./facebook (1).webp" alt="">
+          </a>
+          <a href="./404.html" class="social-icon">
+            <img src="./twitter (1).webp" alt="">
+          </a>
+          <a href="./404.html" class="social-icon">
+            <img src="./instagram (1).webp" alt="">
+          </a>
+          <a href="./404.html" class="social-icon">
+            <img src="./linkedin (1).webp" alt="">
+          </a>
+        </div>
+      </div>
+      
+    </div>
+
+    <div class="footer-links">
+      <h3 class="footer-title">Quick Links</h3>
+      <ul class="footer-list">
+        <li><a href="./event.html">Event Collection</a></li>
+        <li><a href="./fashion.html">Fashion Quiz</a></li>
+        <li><a href="./rewards.html">Loyalty Rewards</a></li>
+        <li><a href="./dashboard.html">DashBoard</a></li>
+        <li><a href="./log.html">LogIn</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-contact">
+      <h3 class="footer-title">Contact</h3>
+      <p class="footer-text">123 E-Commerce St, City, Country</p>
+      <p class="footer-text mail">Email:support@ecommerce.com</p>
+      <p class="footer-text">Phone: +123 456 7890</p>
+      <!-- <div class="footer-newsletter">
+        <input type="email" placeholder="Your email" class="newsletter-input">
+        <button class="newsletter-btn">Subscribe</button>
+      </div> -->
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2025 E-Commerce. All Rights Reserved.</p>
+  </div>
+</footer>
+
+
+<script src="./fashion.js"></script>
+</body>
+</html>

@@ -1,0 +1,645 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="icon" href="./bc logo.webp">
+  <title>E Commerce</title>
+  <link rel="stylesheet" href="./event.css">
+</head>
+<body>
+
+<header class="header" id="site-header">
+  <div class="right">
+    <a class="brand" href="./home2.html" title="Hari IT Solutions">
+      <img src="./bc logo.webp" alt="Hari IT logo" width="40" height="40">
+      <div class="brand-title">
+        <span class="title">STACKLY</span>
+      </div>
+    </a>
+
+    <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-controls="main-nav" aria-expanded="false">☰</button>
+  </div>
+
+  <div class="left">
+    <nav id="main-nav" class="navBar" aria-label="Main navigation">
+      <div class="navLinks">
+        <ul class="linkRight">
+          <li class="dropdown">
+            <a href="./home2.html" aria-haspopup="true" aria-expanded="false">Home ▾</a>
+            <ul class="dropdown-menu">
+              <li><a href="./index.html">Home 1</a></li>
+            </ul>
+          </li>
+          <li><a href="./event.html">Event Collection</a></li>
+          <!-- <li><a href="./finance.html">Top Categories</a></li> -->
+          <li><a href="./fashion.html">Fashion Quiz</a></li>
+          <li><a href="./rewards.html">Loyalty Rewards</a></li>
+          <!-- <li><a href="./dashboard.html">DashBoard</a></li> -->
+        </ul>
+      </div>
+    </nav>
+
+    <button class="btn-cta" onclick="location.href='./log.html'">LogIn</button>
+  </div>
+</header>
+
+
+
+
+
+
+
+
+
+<section class="jump event-hero" data-animate="jump" role="banner" aria-label="Event hero banner">
+  <div class="hero-bg" role="img" aria-label="Festive background image"></div>
+
+    <div class="hero-overlay" aria-hidden="true"></div>
+
+    <div class="hero-inner">
+      <p class="event-kicker">Limited Time</p>
+
+      <h1 class="event-title">
+        Diwali Collection 2025
+      </h1>
+
+      <p class="event-tagline">
+        Brighten your home — exclusive festive offers across decor & gifts.
+      </p>
+
+      <div class="hero-ctas">
+        <a class="btn-primary" href="/collections/diwali" role="button">Shop Now</a>
+        <a class="btn-ghost" href="/deals" role="button">See Deals</a>
+      </div>
+
+      <p class="event-dates" aria-hidden="false">
+        Oct 25 — Nov 02
+      </p>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+<section class="fade event-highlights" data-animate="fade" aria-label="Event highlights and offers">
+  <div class="container">
+    <h2 class="offers-title">Event Highlights</h2>
+    <p class="offers-subtitle">Top benefits during the Diwali Collection 2025 — don’t miss out.</p>
+
+    <ul class="offers-list" role="list">
+      <li class="offer-card" role="listitem">
+        <span class="offer-icon" aria-hidden="true">
+          <!-- simple percent SVG -->
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+            <path d="M3 21L21 3" stroke="#01173d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="7.5" cy="7.5" r="1.8" fill="#01173d"/>
+            <circle cx="16.5" cy="16.5" r="1.8" fill="#01173d"/>
+          </svg>
+        </span>
+        <div class="offer-content">
+          <p class="offer-head">Up to 50% OFF</p>
+          <p class="offer-note">Selected categories &amp; bestsellers</p>
+        </div>
+      </li>
+
+      <li class="offer-card" role="listitem">
+        <span class="offer-icon" aria-hidden="true">
+          <!-- buy 1 get 1 SVG -->
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+            <path d="M3 12h6" stroke="#01173d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M15 12h6" stroke="#01173d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M9 6v12" stroke="#01173d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </span>
+        <div class="offer-content">
+          <p class="offer-head">Buy 1 Get 1</p>
+          <p class="offer-note">Mix &amp; match across categories</p>
+        </div>
+      </li>
+
+      <li class="offer-card" role="listitem">
+        <span class="offer-icon" aria-hidden="true">
+          <!-- truck SVG -->
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+            <rect x="1" y="3" width="13" height="13" rx="2" stroke="#01173d" stroke-width="2" />
+            <path d="M14 8h6v6" stroke="#01173d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="6" cy="19" r="1.6" fill="#01173d"/>
+            <circle cx="18" cy="19" r="1.6" fill="#01173d"/>
+          </svg>
+        </span>
+        <div class="offer-content">
+          <p class="offer-head">Free Delivery</p>
+          <p class="offer-note">On orders above ₹499</p>
+        </div>
+      </li>
+
+      <li class="offer-card" role="listitem">
+        <span class="offer-icon" aria-hidden="true">
+          <!-- clock SVG -->
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+            <circle cx="12" cy="12" r="9" stroke="#01173d" stroke-width="2"/>
+            <path d="M12 7v6l3 2" stroke="#01173d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </span>
+        <div class="offer-content">
+          <p class="offer-head">Limited Time Deals</p>
+          <p class="offer-note">Flash drops every day</p>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+<section class="slide event-categories" data-animate="slide" aria-label="Event product categories">
+  <div class="ec-inner">
+    <header class="ec-header">
+      <h2 class="ec-title">Shop by Category</h2>
+      <p class="ec-sub">Quickly browse top event categories for Diwali Collection 2025</p>
+    </header>
+
+    <ul class="ec-grid" role="list">
+      <li class="ec-card" role="listitem">
+        <a class="ec-link" href="/collections/festive-wear" aria-label="Festive Wear">
+          <div class="ec-media" aria-hidden="true">
+            <img src="https://via.placeholder.com/360x240?text=Festive+Wear" alt="">
+          </div>
+          <div class="ec-body">
+            <p class="ec-name">Festive Wear</p>
+            <p class="ec-count">From 399 — kurtas, sarees &amp; more</p>
+          </div>
+        </a>
+      </li>
+
+      <li class="ec-card" role="listitem">
+        <a class="ec-link" href="/collections/gift-items" aria-label="Gift Items">
+          <div class="ec-media" aria-hidden="true">
+            <img src="https://via.placeholder.com/360x240?text=Gifts" alt="">
+          </div>
+          <div class="ec-body">
+            <p class="ec-name">Gift Items</p>
+            <p class="ec-count">Curated gift boxes &amp; wrapping</p>
+          </div>
+        </a>
+      </li>
+
+      <li class="ec-card" role="listitem">
+        <a class="ec-link" href="/collections/home-decor" aria-label="Home Decor">
+          <div class="ec-media" aria-hidden="true">
+            <img src="https://via.placeholder.com/360x240?text=Home+Decor" alt="">
+          </div>
+          <div class="ec-body">
+            <p class="ec-name">Home Decor</p>
+            <p class="ec-count">Lights, diyas, cushions &amp; more</p>
+          </div>
+        </a>
+      </li>
+
+      <li class="ec-card" role="listitem">
+        <a class="ec-link" href="/collections/electronics-deals" aria-label="Electronics Deals">
+          <div class="ec-media" aria-hidden="true">
+            <img src="https://via.placeholder.com/360x240?text=Electronics" alt="">
+          </div>
+          <div class="ec-body">
+            <p class="ec-name">Electronics Deals</p>
+            <p class="ec-count">Phones, audio, appliances</p>
+          </div>
+        </a>
+      </li>
+
+      <li class="ec-card" role="listitem">
+        <a class="ec-link" href="/collections/combo-offers" aria-label="Combo Offers">
+          <div class="ec-media" aria-hidden="true">
+            <img src="https://via.placeholder.com/360x240?text=Combo+Offers" alt="">
+          </div>
+          <div class="ec-body">
+            <p class="ec-name">Combo Offers</p>
+            <p class="ec-count">Bundles &amp; save-more packs</p>
+          </div>
+        </a>
+      </li>
+    </ul>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+<section class="jump featured-products" data-animate="jump" aria-label="Featured event products">
+  <div class="fp-inner">
+    <header class="fp-header">
+      <h2 class="fp-title">Featured Products</h2>
+      <p class="fp-sub">Top picks for the event — curated just for you.</p>
+    </header>
+
+    <ul class="product-grid" role="list">
+      <!-- Product 1 -->
+      <li class="product-card" role="listitem">
+        <a class="prod-link" href="/product/101" aria-label="Festive Lamp - View product">
+          <div class="prod-media" aria-hidden="true">
+            <img src="https://via.placeholder.com/360x300?text=Lamp" alt="Festive decorative lamp">
+          </div>
+
+          <div class="prod-body">
+            <p class="prod-name">Festive Decorative Lamp</p>
+
+            <div class="prod-rating" aria-label="4.5 out of 5 stars">
+              <span class="sr-only">4.5 out of 5 stars</span>
+              <svg class="star" viewBox="0 0 20 20" width="16" height="16" aria-hidden="true">
+                <path d="M10 1.6l2.6 5.26 5.8.84-4.2 4.08.98 5.7L10 14.9 4.82 17.48l.98-5.7L1.6 7.7l5.8-.84L10 1.6z"/>
+              </svg>
+              <span class="rating-value">4.5</span>
+              <span class="rating-count">(<span>1.2k</span>)</span>
+            </div>
+
+            <div class="prod-price">
+              <span class="price-special">₹1,199</span>
+              <span class="price-old">₹1,799</span>
+            </div>
+
+            <div class="prod-actions">
+              <button class="btn-add" type="button" aria-label="Add Festive Decorative Lamp to cart">
+                Add to Cart
+              </button>
+            </div>
+          </div>
+        </a>
+      </li>
+
+      <!-- Product 2 -->
+      <li class="product-card" role="listitem">
+        <a class="prod-link" href="/product/102" aria-label="Silk Kurta - View product">
+          <div class="prod-media" aria-hidden="true">
+            <img src="https://via.placeholder.com/360x300?text=Kurta" alt="Silk kurta set">
+          </div>
+
+          <div class="prod-body">
+            <p class="prod-name">Silk Kurta Set</p>
+
+            <div class="prod-rating" aria-label="4.7 out of 5 stars">
+              <span class="sr-only">4.7 out of 5 stars</span>
+              <svg class="star" viewBox="0 0 20 20" width="16" height="16" aria-hidden="true">
+                <path d="M10 1.6l2.6 5.26 5.8.84-4.2 4.08.98 5.7L10 14.9 4.82 17.48l.98-5.7L1.6 7.7l5.8-.84L10 1.6z"/>
+              </svg>
+              <span class="rating-value">4.7</span>
+              <span class="rating-count">(<span>890</span>)</span>
+            </div>
+
+            <div class="prod-price">
+              <span class="price-special">₹2,499</span>
+              <span class="price-old">₹3,499</span>
+            </div>
+
+            <div class="prod-actions">
+              <button class="btn-add" type="button" aria-label="Add Silk Kurta Set to cart">
+                Add to Cart
+              </button>
+            </div>
+          </div>
+        </a>
+      </li>
+
+      <!-- Product 3 -->
+      <li class="product-card" role="listitem">
+        <a class="prod-link" href="/product/103" aria-label="Bluetooth Speaker - View product">
+          <div class="prod-media" aria-hidden="true">
+            <img src="https://via.placeholder.com/360x300?text=Speaker" alt="Portable bluetooth speaker">
+          </div>
+
+          <div class="prod-body">
+            <p class="prod-name">Portable Bluetooth Speaker</p>
+
+            <div class="prod-rating" aria-label="4.4 out of 5 stars">
+              <span class="sr-only">4.4 out of 5 stars</span>
+              <svg class="star" viewBox="0 0 20 20" width="16" height="16" aria-hidden="true">
+                <path d="M10 1.6l2.6 5.26 5.8.84-4.2 4.08.98 5.7L10 14.9 4.82 17.48l.98-5.7L1.6 7.7l5.8-.84L10 1.6z"/>
+              </svg>
+              <span class="rating-value">4.4</span>
+              <span class="rating-count">(<span>2.1k</span>)</span>
+            </div>
+
+            <div class="prod-price">
+              <span class="price-special">₹1,799</span>
+              <span class="price-old">₹2,699</span>
+            </div>
+
+            <div class="prod-actions">
+              <button class="btn-add" type="button" aria-label="Add Portable Bluetooth Speaker to cart">
+                Add to Cart
+              </button>
+            </div>
+          </div>
+        </a>
+      </li>
+
+      <!-- Product 4 -->
+      <li class="product-card" role="listitem">
+        <a class="prod-link" href="/product/104" aria-label="Decor Cushion Set - View product">
+          <div class="prod-media" aria-hidden="true">
+            <img src="https://via.placeholder.com/360x300?text=Cushions" alt="Decorative cushion set">
+          </div>
+
+          <div class="prod-body">
+            <p class="prod-name">Decor Cushion Set</p>
+
+            <div class="prod-rating" aria-label="4.3 out of 5 stars">
+              <span class="sr-only">4.3 out of 5 stars</span>
+              <svg class="star" viewBox="0 0 20 20" width="16" height="16" aria-hidden="true">
+                <path d="M10 1.6l2.6 5.26 5.8.84-4.2 4.08.98 5.7L10 14.9 4.82 17.48l.98-5.7L1.6 7.7l5.8-.84L10 1.6z"/>
+              </svg>
+              <span class="rating-value">4.3</span>
+              <span class="rating-count">(<span>430</span>)</span>
+            </div>
+
+            <div class="prod-price">
+              <span class="price-special">₹799</span>
+              <span class="price-old">₹1,199</span>
+            </div>
+
+            <div class="prod-actions">
+              <button class="btn-add" type="button" aria-label="Add Decor Cushion Set to cart">
+                Add to Cart
+              </button>
+            </div>
+          </div>
+        </a>
+      </li>
+    </ul>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+<section class="fade flash-deals" data-animate="fade" aria-label="Flash sale and limited time deals">
+  <div class="fd-inner">
+    <header class="fd-header">
+      <div class="fd-title-wrap">
+        <h2 class="fd-title">Flash Sale — Limited Time Deals</h2>
+        <p class="fd-sub">Grab them before they're gone</p>
+      </div>
+
+      <!-- Countdown (static placeholder — hook JS to .countdown for live timer) -->
+      <div class="countdown" role="timer" aria-live="polite" aria-atomic="true" aria-label="Sale ends in">
+        <div class="count-col">
+          <span class="count-num" data-unit="days">02</span>
+          <span class="count-label">Days</span>
+        </div>
+        <div class="count-col">
+          <span class="count-num" data-unit="hours">12</span>
+          <span class="count-label">Hours</span>
+        </div>
+        <div class="count-col">
+          <span class="count-num" data-unit="mins">04</span>
+          <span class="count-label">Mins</span>
+        </div>
+        <div class="count-col">
+          <span class="count-num" data-unit="secs">29</span>
+          <span class="count-label">Secs</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- deals grid -->
+    <ul class="deals-grid" role="list">
+      <!-- Deal item -->
+      <li class="deal-card" role="listitem">
+        <a class="deal-link" href="/product/201" aria-label="Deal: LED Festive Lights">
+          <div class="deal-media" aria-hidden="true">
+            <img src="https://via.placeholder.com/360x260?text=Lights" alt="LED Festive Lights">
+            <span class="deal-badge" aria-hidden="true">50% OFF</span>
+          </div>
+
+          <div class="deal-body">
+            <p class="deal-name">LED Festive Lights</p>
+
+            <div class="deal-price">
+              <span class="price-special">₹499</span>
+              <span class="price-old">₹999</span>
+            </div>
+
+            <div class="deal-stock" aria-hidden="true">
+              <div class="stock-info">
+                <span class="stock-text">Limited stock</span>
+                <span class="stock-left">12 left</span>
+              </div>
+              <div class="stock-bar" aria-hidden="true">
+                <div class="stock-fill" style="width: 24%;"></div>
+              </div>
+            </div>
+
+            <div class="deal-actions">
+              <button class="btn-buy" type="button" aria-label="Add LED Festive Lights to cart">
+                Add to Cart
+              </button>
+            </div>
+          </div>
+        </a>
+      </li>
+
+      <!-- Deal item -->
+      <li class="deal-card" role="listitem">
+        <a class="deal-link" href="/product/202" aria-label="Deal: Copper Diya Set">
+          <div class="deal-media" aria-hidden="true">
+            <img src="https://via.placeholder.com/360x260?text=Diya+Set" alt="Copper Diya Set">
+            <span class="deal-badge" aria-hidden="true">Buy 1 Get 1</span>
+          </div>
+
+          <div class="deal-body">
+            <p class="deal-name">Copper Diya Set</p>
+
+            <div class="deal-price">
+              <span class="price-special">₹799</span>
+              <span class="price-old">₹1,399</span>
+            </div>
+
+            <div class="deal-stock" aria-hidden="true">
+              <div class="stock-info">
+                <span class="stock-text">Almost gone</span>
+                <span class="stock-left">6 left</span>
+              </div>
+              <div class="stock-bar" aria-hidden="true">
+                <div class="stock-fill" style="width: 12%;"></div>
+              </div>
+            </div>
+
+            <div class="deal-actions">
+              <button class="btn-buy" type="button" aria-label="Add Copper Diya Set to cart">
+                Add to Cart
+              </button>
+            </div>
+          </div>
+        </a>
+      </li>
+
+      <!-- Deal item -->
+      <li class="deal-card" role="listitem">
+        <a class="deal-link" href="/product/203" aria-label="Deal: Portable Mixer">
+          <div class="deal-media" aria-hidden="true">
+            <img src="https://via.placeholder.com/360x260?text=Mixer" alt="Portable Mixer">
+            <span class="deal-badge" aria-hidden="true">30% OFF</span>
+          </div>
+
+          <div class="deal-body">
+            <p class="deal-name">Portable Mixer</p>
+
+            <div class="deal-price">
+              <span class="price-special">₹2,799</span>
+              <span class="price-old">₹3,999</span>
+            </div>
+
+            <div class="deal-stock" aria-hidden="true">
+              <div class="stock-info">
+                <span class="stock-text">Limited stock</span>
+                <span class="stock-left">24 left</span>
+              </div>
+              <div class="stock-bar" aria-hidden="true">
+                <div class="stock-fill" style="width: 48%;"></div>
+              </div>
+            </div>
+
+            <div class="deal-actions">
+              <button class="btn-buy" type="button" aria-label="Add Portable Mixer to cart">
+                Add to Cart
+              </button>
+            </div>
+          </div>
+        </a>
+      </li>
+
+      <!-- Deal item -->
+      <li class="deal-card" role="listitem">
+        <a class="deal-link" href="/product/204" aria-label="Deal: Cushion Combo">
+          <div class="deal-media" aria-hidden="true">
+            <img src="https://via.placeholder.com/360x260?text=Cushion+Combo" alt="Cushion Combo">
+            <span class="deal-badge" aria-hidden="true">Combo Offer</span>
+          </div>
+
+          <div class="deal-body">
+            <p class="deal-name">Cushion Combo (2 pcs)</p>
+
+            <div class="deal-price">
+              <span class="price-special">₹1,099</span>
+              <span class="price-old">₹1,899</span>
+            </div>
+
+            <div class="deal-stock" aria-hidden="true">
+              <div class="stock-info">
+                <span class="stock-text">Hurry</span>
+                <span class="stock-left">5 left</span>
+              </div>
+              <div class="stock-bar" aria-hidden="true">
+                <div class="stock-fill" style="width: 10%;"></div>
+              </div>
+            </div>
+
+            <div class="deal-actions">
+              <button class="btn-buy" type="button" aria-label="Add Cushion Combo to cart">
+                Add to Cart
+              </button>
+            </div>
+          </div>
+        </a>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- <section class="slide" data-animate="slide">Slide Box</section> -->
+
+
+
+
+
+
+
+<footer class="footer">
+  <div class="footer-container">
+
+    <div class="footer-about">
+      <a class="brand" href="./home2.html" title="Hari IT Solutions">
+        <img src="./bc logo.webp" alt="Hari IT logo" width="40" height="40">
+        <div class="brand-title">
+          <span class="title">STACKLY</span>
+        </div>
+      </a>
+
+      <div>
+        <h3 class="footer-title">About Us</h3>
+        <p class="footer-text">We provide the best products at the best prices. Your satisfaction is our priority.</p>
+        <div class="footer-social">
+          <a href="./404.html" class="social-icon">
+            <img src="./facebook (1).webp" alt="">
+          </a>
+          <a href="./404.html" class="social-icon">
+            <img src="./twitter (1).webp" alt="">
+          </a>
+          <a href="./404.html" class="social-icon">
+            <img src="./instagram (1).webp" alt="">
+          </a>
+          <a href="./404.html" class="social-icon">
+            <img src="./linkedin (1).webp" alt="">
+          </a>
+        </div>
+      </div>
+      
+    </div>
+
+    <div class="footer-links">
+      <h3 class="footer-title">Quick Links</h3>
+      <ul class="footer-list">
+        <li><a href="./event.html">Event Collection</a></li>
+        <li><a href="./fashion.html">Fashion Quiz</a></li>
+        <li><a href="./rewards.html">Loyalty Rewards</a></li>
+        <li><a href="./dashboard.html">DashBoard</a></li>
+        <li><a href="./log.html">LogIn</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-contact">
+      <h3 class="footer-title">Contact</h3>
+      <p class="footer-text">123 E-Commerce St, City, Country</p>
+      <p class="footer-text mail">Email:support@ecommerce.com</p>
+      <p class="footer-text">Phone: +123 456 7890</p>
+      <!-- <div class="footer-newsletter">
+        <input type="email" placeholder="Your email" class="newsletter-input">
+        <button class="newsletter-btn">Subscribe</button>
+      </div> -->
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2025 E-Commerce. All Rights Reserved.</p>
+  </div>
+</footer>
+
+
+<script src="./event.js"></script>
+</body>
+</html>
