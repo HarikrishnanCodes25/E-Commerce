@@ -1,0 +1,284 @@
+<!-- <!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="icon" href="./bc logo.webp">
+  <title>E Commerce</title>
+  <link rel="stylesheet" href="./contact.css">
+</head>
+<body>
+
+<header class="header" id="site-header">
+  <div class="right">
+    <a class="brand" href="./index.html" title="Hari IT Solutions">
+      <img src="./bc logo.webp" alt="Hari IT logo" width="40" height="40">
+      <div class="brand-title">
+        <span class="title">STACKLY</span>
+      </div>
+    </a>
+
+    <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-controls="main-nav" aria-expanded="false">☰</button>
+  </div>
+
+  <div class="left">
+    <nav id="main-nav" class="navBar" aria-label="Main navigation">
+      <div class="navLinks">
+        <ul class="linkRight">
+          <li class="dropdown">
+            <a href="./home2.html" aria-haspopup="true" aria-expanded="false">Home ▾</a>
+            <ul class="dropdown-menu">
+              <li><a href="./home2.html">Home 2</a></li>
+            </ul>
+          </li>
+          <li><a href="./top.html">Top Categories</a></li>
+          <li><a href="./product.html">Featured Products</a></li>
+          <li><a href="./testimonial.html">Customer Testimonials</a></li>
+          <li><a href="./dashboard.html">DashBoard</a></li>
+          <li><a href="./contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <button class="btn-cta" onclick="location.href='./log.html'">LogIn</button>
+  </div>
+</header>
+
+
+
+
+
+
+
+
+
+</body>
+</html> -->
+
+
+
+
+
+
+
+
+
+
+
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="icon" href="./bc logo.webp">
+  <title>E Commerce</title>
+  <link rel="stylesheet" href="./contact.css">
+</head>
+<body>
+
+<header class="header" id="site-header">
+  <div class="right">
+    <a class="brand" href="./index.html" title="Hari IT Solutions">
+      <img src="./bc logo.webp" alt="Hari IT logo" width="40" height="40">
+      <div class="brand-title">
+        <span class="title">STACKLY</span>
+      </div>
+    </a>
+
+    <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-controls="main-nav" aria-expanded="false">☰</button>
+  </div>
+
+  <div class="left">
+    <nav id="main-nav" class="navBar" aria-label="Main navigation">
+      <div class="navLinks">
+        <ul class="linkRight">
+          <li class="dropdown">
+            <a href="./home2.html" aria-haspopup="true" aria-expanded="false">Home ▾</a>
+            <ul class="dropdown-menu">
+              <li><a href="./home2.html">Home 2</a></li>
+            </ul>
+          </li>
+          <li><a href="./top.html">Top Categories</a></li>
+          <li><a href="./product.html">Featured Products</a></li>
+          <li><a href="./testimonial.html">Customer Testimonials</a></li>
+          <li><a href="./dashboard.html">DashBoard</a></li>
+          <li><a href="./contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <button class="btn-cta" onclick="location.href='./log.html'">LogIn</button>
+  </div>
+</header>
+
+<main>
+  <section class="contact-section" aria-labelledby="contact-heading">
+    <div class="container">
+      <header class="contact-header">
+        <h2 id="contact-heading">Get in touch</h2>
+        <p class="lead">
+          Have a question about an order, partnership or product? Drop us a message — we’ll reply within 24–48 hours.
+        </p>
+      </header>
+
+      <div class="contact-grid">
+        <!-- LEFT: contact info / cards -->
+        <aside class="contact-info" aria-label="Contact information">
+          <div class="info-card">
+            <h3>Customer Support</h3>
+            <p>Mon — Fri: 9:00 AM — 7:00 PM</p>
+            <a class="info-link" href="tel:+911234567890">+91 12345 67890</a>
+            <a class="info-link" href="mailto:support@example.com">support@example.com</a>
+          </div>
+
+          <div class="info-card">
+            <h3>Returns & Refunds</h3>
+            <p>Questions about returns? We're here to help.</p>
+            <a class="info-link" href="mailto:returns@example.com">returns@example.com</a>
+          </div>
+
+          <div class="info-card map-card" aria-hidden="false">
+            <h3>Store / Warehouse</h3>
+            <address>
+              45 Commerce Street<br />
+              Chennai, Tamil Nadu<br />
+              India
+            </address>
+            <!-- placeholder for map iframe -->
+            <div class="map-placeholder" role="img" aria-label="Map placeholder">Map preview</div>
+          </div>
+        </aside>
+
+        <!-- RIGHT: contact form -->
+        <!-- IMPORTANT: action points to ./404.html so valid submit goes there -->
+        <form class="contact-form" action="./404.html" method="post" novalidate aria-label="Contact form">
+          <fieldset>
+            <label for="name">Full name</label>
+            <input
+              id="name"
+              name="name"
+              type="text"
+              autocomplete="name"
+              placeholder="Your full name"
+              required
+            />
+          </fieldset>
+
+          <fieldset>
+            <label for="email">Email</label>
+            <input
+              id="email"
+              name="email"
+              type="email"
+              autocomplete="email"
+              placeholder="you@example.com"
+              required
+            />
+          </fieldset>
+
+          <fieldset>
+            <label for="phone">Phone (optional)</label>
+            <input
+              id="phone"
+              name="phone"
+              type="tel"
+              autocomplete="tel"
+              placeholder="+91 12345 67890"
+            />
+          </fieldset>
+
+          <fieldset>
+            <label for="subject">Subject</label>
+            <input
+              id="subject"
+              name="subject"
+              type="text"
+              placeholder="Order #, product name or topic"
+              required
+            />
+          </fieldset>
+
+          <fieldset>
+            <label for="message">Message</label>
+            <textarea
+              id="message"
+              name="message"
+              rows="6"
+              placeholder="Tell us more about your question..."
+              required
+            ></textarea>
+          </fieldset>
+
+          <div class="form-actions">
+            <button type="submit" class="btn-primary">Send message</button>
+            <!-- change: type="button" so script controls navigation -->
+            <button type="button" class="btn-secondary" id="btn-reset">Reset</button>
+          </div>
+
+          <p class="small-note">
+            By contacting us you agree to our <a href="/privacy">privacy policy</a>.
+          </p>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-about">
+      <a class="brand" href="./index.html" title="Hari IT Solutions">
+        <img src="./bc logo.webp" alt="Hari IT logo" width="40" height="40">
+        <div class="brand-title">
+          <span class="title">STACKLY</span>
+        </div>
+      </a>
+
+      <div>
+        <h3 class="footer-title">About Us</h3>
+        <p class="footer-text">We provide the best products at the best prices. Your satisfaction is our priority.</p>
+        <div class="footer-social">
+          <a href="./404.html" class="social-icon">
+            <img src="./facebook (1).webp" alt="">
+          </a>
+          <a href="./404.html" class="social-icon">
+            <img src="./twitter (1).webp" alt="">
+          </a>
+          <a href="./404.html" class="social-icon">
+            <img src="./instagram (1).webp" alt="">
+          </a>
+          <a href="./404.html" class="social-icon">
+            <img src="./linkedin (1).webp" alt="">
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-links">
+      <h3 class="footer-title">Quick Links</h3>
+      <ul class="footer-list">
+        <li><a href="./top.html">Top Categories</a></li>
+        <li><a href="./product.html">Featured Products</a></li>
+        <li><a href="testimonial.html">Customer Testimonials</a></li>
+        <li><a href="./dashboard.html">DashBoard</a></li>
+        <li><a href="./log.html">LogIn</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-contact">
+      <h3 class="footer-title">Contact</h3>
+      <p class="footer-text">123 E-Commerce St, City, Country</p>
+      <p class="footer-text mail">Email:support@ecommerce.com</p>
+      <p class="footer-text">Phone: +123 456 7890</p>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2025 E-Commerce. All Rights Reserved.</p>
+  </div>
+</footer>
+
+<script src="./contact.js"></script>
+</body>
+</html>

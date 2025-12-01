@@ -3,247 +3,140 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="icon" href="./bc remove logo.webp">
-  <title>LogIn</title>
+  <title>Auth — Sign In / Sign Up / Forgot</title>
   <link rel="stylesheet" href="./log.css" />
 </head>
 <body>
-  <div class="container">
-    <main class="auth-shell" aria-labelledby="auth-heading">
-      <header class="auth-brand">
-        <!-- <div class="logo">IT</div> -->
-         <img src="./bc logo.webp" alt="" class="logo">
-        <div>
-          <h1 id="auth-heading" class="brand-title">STACKLY</h1>
-          <p class="brand-lead">Track your orders, earn rewards, and manage your account — sign in or create an account.</p>
-          <button onclick="window.location.href='./index.html'">Go Back</button>
-        </div>
-      </header>
+  <main class="page">
+    <div class="card" role="main" aria-labelledby="auth-title">
+      <div class="logo" aria-hidden="false">
+        <div class="logo-mark"></div>
+        <div class="brand">Stackly</div>
+      </div>
 
-      <section class="auth-card" role="region" aria-label="Authentication">
-        <nav class="auth-tabs" role="tablist" aria-label="Authentication tabs">
-          <button class="tab active" data-target="signin" role="tab" aria-selected="true">Sign In</button>
-          <button class="tab" data-target="signup" role="tab" aria-selected="false">Sign Up</button>
-          <button class="tab" data-target="forgot" role="tab" aria-selected="false">Forgot Password</button>
-        </nav>
+      <div class="auth-nav" role="tablist" aria-label="Authentication switch">
+        <button id="nav-signin" class="active" role="tab" aria-selected="true">Sign In</button>
+        <button id="nav-signup" role="tab">Sign Up</button>
+        <button id="nav-forgot" role="tab"></button>
+      </div>
 
-        <div id="errorBanner" class="error-banner" role="alert" aria-live="polite" hidden></div>
+      <!-- Sign In view -->
+      <section id="view-signin" class="view active" aria-labelledby="signin-title">
+        <h1 id="signin-title" class="title">Welcome Back</h1>
+        <p class="subtitle">Enter your credentials to access your account.</p>
 
-        <!-- Sign In -->
-        <form id="signin" class="auth-form show" novalidate>
-          <h2 class="form-title">Sign In</h2>
-          <p class="form-desc">Enter your credentials to access the dashboard.</p>
-
-          <div class="form-row">
-            <label for="si-email">Email</label>
-            <input id="si-email" type="email" autocomplete="email" required />
-            <div class="field-error" id="si-email-err"></div>
+        <form id="form-signin" class="auth-form" novalidate>
+          <div class="field">
+            <label for="si-email">Email Address</label>
+            <div class="input-wrap">
+              <input id="si-email" name="email" type="email" placeholder="name@example.com" required />
+              <span class="input-icon" aria-hidden="true">✉️</span>
+            </div>
           </div>
 
-          <div class="form-row">
-            <label for="si-pass">Password</label>
-            <input id="si-pass" type="password" autocomplete="current-password" required />
-            <div class="field-error" id="si-pass-err"></div>
+          <div class="field">
+            <label for="si-password">Password</label>
+            <div class="input-wrap">
+              <input id="si-password" name="password" type="password" placeholder="Enter your password" required />
+              <button type="button" class="eye" data-target="si-password" aria-label="toggle password visibility">👁️</button>
+            </div>
           </div>
 
-          <div class="form-actions">
-            <button type="submit" class="btn primary">Sign In</button>
-            <button type="button" class="btn ghost" data-demo="signin">Fill Demo</button>
-            <a class="link right" href="#" data-switch="forgot">Forgot password?</a>
+          <div class="small-row">
+            <label class="checkbox">
+              <input id="si-remember" name="remember" type="checkbox" />
+              <span>Remember me</span>
+            </label>
+
+            <a class="forgot" href="#" id="link-forgot">Forgot Password?</a>
           </div>
+
+          <p id="si-error" class="error" aria-live="polite" hidden>plz fill the valid details</p>
+
+          <button type="submit" class="primary-btn">Sign In</button>
+
+          <p class="signup-line">
+            Don't have an account?
+            <a href="#" id="link-signup">Sign Up</a>
+          </p>
         </form>
-
-        <!-- Sign Up -->
-        <form id="signup" class="auth-form" novalidate>
-          <h2 class="form-title">Sign Up</h2>
-          <p class="form-desc">Create a new account to get started.</p>
-
-          <div class="form-row">
-            <label for="su-email">Email</label>
-            <input id="su-email" type="email" autocomplete="email" required />
-            <div class="field-error" id="su-email-err"></div>
-          </div>
-
-          <div class="form-row">
-            <label for="su-pass">Password</label>
-            <input id="su-pass" type="password" autocomplete="new-password" required />
-            <div class="field-error" id="su-pass-err"></div>
-          </div>
-
-          <div class="form-row">
-            <label for="su-confirm">Confirm Password</label>
-            <input id="su-confirm" type="password" autocomplete="new-password" required />
-            <div class="field-error" id="su-confirm-err"></div>
-          </div>
-
-          <div class="form-actions">
-            <button type="submit" class="btn primary">Sign Up</button>
-            <button type="button" class="btn ghost" data-demo="signup">Fill Demo</button>
-            <a class="link right" href="#" data-switch="signin">Already have an account?</a>
-          </div>
-        </form>
-
-        <!-- Forgot -->
-        <form id="forgot" class="auth-form" novalidate>
-          <h2 class="form-title">Forgot Password</h2>
-          <p class="form-desc">Enter your email and we'll send reset instructions.</p>
-
-          <div class="form-row">
-            <label for="fo-email">Email</label>
-            <input id="fo-email" type="email" autocomplete="email" required />
-            <div class="field-error" id="fo-email-err"></div>
-          </div>
-
-          <div class="form-actions">
-            <button type="submit" class="btn primary">Send Reset Link</button>
-            <button type="button" class="btn ghost" data-switch="signin">Back to Sign In</button>
-          </div>
-        </form>
-
-        <div class="auth-footer">By continuing you agree to the <a class="link" href="#">terms</a>.</div>
       </section>
-    </main>
-  </div>
 
-<script>
-(function () {
-  // Helpers
-  function $(sel, ctx=document) { return ctx.querySelector(sel); }
-  function $all(sel, ctx=document) { return Array.from(ctx.querySelectorAll(sel)); }
+      <!-- Sign Up view -->
+      <section id="view-signup" class="view" aria-labelledby="signup-title">
+        <h1 id="signup-title" class="title">Create Account</h1>
+        <p class="subtitle">Sign up to access enterprise services, demos and quotes.</p>
 
-  // Elements
-  const tabs = $all('.tab');
-  const forms = $all('.auth-form');
-  const errorBanner = $('#errorBanner');
+        <form id="form-signup" class="auth-form" novalidate>
+          <div class="field">
+            <label for="su-name">Full name</label>
+            <div class="input-wrap">
+              <input id="su-name" name="name" type="text" placeholder="Your full name" required />
+            </div>
+          </div>
 
-  // Tab switching
-  tabs.forEach(tab => {
-    tab.addEventListener('click', () => {
-      const target = tab.dataset.target;
-      // update tab active state
-      tabs.forEach(t => { t.classList.toggle('active', t === tab); t.setAttribute('aria-selected', t === tab ? 'true' : 'false'); });
-      // show target form
-      forms.forEach(f => {
-        if (f.id === target) { f.classList.add('show'); f.removeAttribute('aria-hidden'); }
-        else { f.classList.remove('show'); f.setAttribute('aria-hidden','true'); }
-      });
-      // hide banner
-      hideBanner();
-    });
-  });
+          <div class="field">
+            <label for="su-email">Email Address</label>
+            <div class="input-wrap">
+              <input id="su-email" name="email" type="email" placeholder="name@example.com" required />
+              <span class="input-icon" aria-hidden="true">✉️</span>
+            </div>
+          </div>
 
-  // Click links that switch forms
-  $all('[data-switch]').forEach(el => {
-    el.addEventListener('click', (e) => {
-      e.preventDefault();
-      const target = el.dataset.switch;
-      // find tab and click
-      const tab = tabs.find(t => t.dataset.target === target);
-      if (tab) tab.click();
-    });
-  });
+          <div class="field">
+            <label for="su-password">Password</label>
+            <div class="input-wrap">
+              <input id="su-password" name="password" type="password" placeholder="Create a password (min 6 chars)" required />
+              <button type="button" class="eye" data-target="su-password" aria-label="toggle password visibility">👁️</button>
+            </div>
+          </div>
 
-  function showBanner(msg) {
-    errorBanner.hidden = false;
-    errorBanner.textContent = msg;
-  }
-  function hideBanner() {
-    errorBanner.hidden = true;
-    errorBanner.textContent = '';
-  }
+          <div class="field">
+            <label for="su-confirm">Confirm Password</label>
+            <div class="input-wrap">
+              <input id="su-confirm" name="confirm" type="password" placeholder="Re-enter password" required />
+              <button type="button" class="eye" data-target="su-confirm" aria-label="toggle password visibility">👁️</button>
+            </div>
+          </div>
 
-  // Basic validation utilities
-  function validEmail(v) {
-    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v);
-  }
+          <p id="su-error" class="error" aria-live="polite" hidden>plz fill the valid details</p>
 
-  // Demo fill buttons
-  $all('[data-demo]').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const which = btn.dataset.demo;
-      if (which === 'signin') {
-        $('#si-email').value = 'admin@example.com';
-        $('#si-pass').value = 'Password123';
-      } else if (which === 'signup') {
-        $('#su-email').value = 'newuser@example.com';
-        $('#su-pass').value = 'Password123';
-        $('#su-confirm').value = 'Password123';
-      }
-      hideBanner();
-    });
-  });
+          <button type="submit" class="primary-btn">Create Account</button>
 
-  // Form submit handlers
-  // Signin
-  $('#signin').addEventListener('submit', function (e) {
-    e.preventDefault();
-    hideBanner();
-    $('#si-email-err').textContent = '';
-    $('#si-pass-err').textContent = '';
+          <p class="signup-line">
+            Already have an account?
+            <a href="#" id="link-signin">Sign In</a>
+          </p>
+        </form>
+      </section>
 
-    const email = $('#si-email').value.trim();
-    const pass = $('#si-pass').value;
+      <!-- Forgot Password view -->
+      <section id="view-forgot" class="view" aria-labelledby="forgot-title">
+        <h1 id="forgot-title" class="title">Forgot Password</h1>
+        <p class="subtitle">Enter your email and we'll send password reset instructions.</p>
 
-    let ok = true;
-    if (!validEmail(email)) { $('#si-email-err').textContent = 'Enter a valid email.'; ok = false; }
-    if (pass.length < 6) { $('#si-pass-err').textContent = 'Password must be at least 6 characters.'; ok = false; }
+        <form id="form-forgot" class="auth-form" novalidate>
+          <div class="field">
+            <label for="fp-email">Email Address</label>
+            <div class="input-wrap">
+              <input id="fp-email" name="email" type="email" placeholder="name@example.com" required />
+              <span class="input-icon" aria-hidden="true">✉️</span>
+            </div>
+          </div>
 
-    // Always show simulated server error banner; redirect only when client-side valid
-    showBanner('Server error: Unable to process sign in (simulated).');
+          <p id="fp-error" class="error" aria-live="polite" hidden>plz fill the valid details</p>
 
-    if (ok) {
-      // If you want a delay to show banner before redirect, replace immediate redirect with setTimeout
-      // Example: setTimeout(() => window.location.href = '404.html', 800);
-      window.location.href = '404.html';
-    }
-  });
+          <button type="submit" class="primary-btn">Send Reset Link</button>
 
-  // Signup
-  $('#signup').addEventListener('submit', function (e) {
-    e.preventDefault();
-    hideBanner();
-    $('#su-email-err').textContent = '';
-    $('#su-pass-err').textContent = '';
-    $('#su-confirm-err').textContent = '';
+          <p class="signup-line">
+            Remembered?
+            <a href="#" id="link-signin-2">Sign In</a>
+          </p>
+        </form>
+      </section>
+    </div>
+  </main>
 
-    const email = $('#su-email').value.trim();
-    const pass = $('#su-pass').value;
-    const conf = $('#su-confirm').value;
-
-    let ok = true;
-    if (!validEmail(email)) { $('#su-email-err').textContent = 'Enter a valid email.'; ok = false; }
-    if (pass.length < 6) { $('#su-pass-err').textContent = 'Password must be at least 6 characters.'; ok = false; }
-    if (conf !== pass) { $('#su-confirm-err').textContent = 'Passwords do not match.'; ok = false; }
-
-    showBanner('Server error: Unable to create account (simulated).');
-
-    if (ok) {
-      window.location.href = '404.html';
-    }
-  });
-
-  // Forgot
-  $('#forgot').addEventListener('submit', function (e) {
-    e.preventDefault();
-    hideBanner();
-    $('#fo-email-err').textContent = '';
-
-    const email = $('#fo-email').value.trim();
-    if (!validEmail(email)) {
-      $('#fo-email-err').textContent = 'Enter a valid email.';
-      return;
-    }
-
-    // Show simulated server error; do not redirect (per earlier flows), but you can redirect if needed
-    showBanner('Server error: Unable to send reset link (simulated).');
-
-    // If you want to redirect on valid, uncomment below:
-    // window.location.href = '404.html';
-  });
-
-  // Initialize: ensure only Sign In visible
-  tabs[0].click();
-})();
-</script>
+  <script src="./log.js"></script>
 </body>
 </html>
