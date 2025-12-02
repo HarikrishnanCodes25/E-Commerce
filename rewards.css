@@ -686,6 +686,12 @@ main {
   margin: 0 auto;
 }
 
+.testimonials .testimonials-container .testimonials-grid 
+.testimonial-card:nth-child(3) .testimonial-text{
+  /* color: red; */
+  margin-top: 22px;
+}
+
 /* Section Title */
 .testimonials-title {
   font-size: 36px;

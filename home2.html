@@ -189,7 +189,7 @@
           <span class="badge badge-sale">20% OFF</span>
           <img
             loading="lazy"
-            src="./gym 2.webp"
+            src="./band 2.webp"
             alt="Smart Fitness Watch"
             class="product-img"
             width="400"
@@ -198,7 +198,7 @@
         </div>
 
         <div class="card-body">
-          <h3 class="product-name">Smart Fitness Watch</h3>
+          <h3 class="product-name">Smart Fitness Band</h3>
           <p class="product-short">Heart-rate, SpO₂, GPS tracking, sleep coaching — perfect for everyday fitness.</p>
 
           <div class="product-meta">
@@ -786,8 +786,9 @@
           <div class="promo">
             <label for="promo-code">Have a promo code?</label>
             <div class="promo-row">
-              <input id="promo-code" class="promo-input" type="text" placeholder="ENTER CODE">
-              <button class="btn apply" onclick="window.location.href='./404.html'">Apply</button>
+              <input id="promo-code" class="promo-input" type="text" placeholder="ENTER CODE" aria-describedby="promo-error" />
+              <button id="promo-apply" class="btn apply" type="button">Apply</button>
+              <div id="promo-error" class="promo-error" role="alert" aria-live="polite" hidden>Plz fill the valid details.</div>
             </div>
           </div>
 

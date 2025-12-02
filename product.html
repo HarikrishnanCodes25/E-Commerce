@@ -77,232 +77,32 @@
 
 
 
-<section class="fade product-controls" data-animate="fade" aria-label="Product filter and sort">
-  <div class="container controls-inner">
+<section class="fade quick-cats" data-animate="fade">
+  <h2 class="qc-title">Shop by Quick Categories</h2>
 
-    <!-- Mobile filter toggle: uses details so it works without JS -->
-    <details class="mobile-filter-toggle" aria-hidden="true">
-      <summary class="mobile-filter-summary">Filters & Sort</summary>
+  <div class="qc-grid">
 
-      <!-- Filters in an accordion for mobile -->
-      <form class="filters-form" id="filters-form" method="get" action="#" aria-label="Filter featured products">
-        <!-- Category -->
-        <details class="filter-accordion" open>
-          <summary>Category</summary>
-          <div class="filter-body">
-            <select name="category" id="filter-category" aria-label="Filter by category">
-              <option value="">All categories</option>
-              <option value="clothing">Clothing</option>
-              <option value="accessories">Accessories</option>
-              <option value="home">Home & Living</option>
-              <option value="beauty">Beauty</option>
-            </select>
-          </div>
-        </details>
+    <div class="qc-item">
+      <h4>Best Sellers</h4>
+      <p>Top-selling products chosen by thousands of customers.</p>
+    </div>
 
-        <!-- Price -->
-        <details class="filter-accordion">
-          <summary>Price</summary>
-          <div class="filter-body">
-            <div class="price-inputs">
-              <label for="price-min">Min (₹)</label>
-              <input type="number" id="price-min" name="price_min" min="0" step="1" placeholder="0">
+    <div class="qc-item">
+      <h4>New Arrivals</h4>
+      <p>Freshly added items — trending this week.</p>
+    </div>
 
-              <label for="price-max">Max (₹)</label>
-              <input type="number" id="price-max" name="price_max" min="0" step="1" placeholder="9999">
-            </div>
+    <div class="qc-item">
+      <h4>Discount Deals</h4>
+      <p>Grab big savings with limited-time offers.</p>
+    </div>
 
-            <label for="price-range" class="sr-only">Quick price slider</label>
-            <input type="range" id="price-range" name="price_range" min="0" max="10000" step="50" value="10000" aria-valuemin="0" aria-valuemax="10000">
-            <div class="range-note">Use number fields to set exact range, or move the slider for quick selection.</div>
-          </div>
-        </details>
+    <div class="qc-item">
+      <h4>Trending Now</h4>
+      <p>Popular picks currently in high demand.</p>
+    </div>
 
-        <!-- Ratings -->
-        <details class="filter-accordion">
-          <summary>Ratings</summary>
-          <div class="filter-body">
-            <fieldset>
-              <legend class="sr-only">Filter by rating</legend>
-              <label class="rating-option">
-                <input type="checkbox" name="rating[]" value="4">
-                <span class="stars" aria-hidden="true">★★★★ &amp; up</span>
-                <span class="visually-hidden">4 stars and up</span>
-              </label>
-
-              <label class="rating-option">
-                <input type="checkbox" name="rating[]" value="3">
-                <span class="stars" aria-hidden="true">★★★ &amp; up</span>
-                <span class="visually-hidden">3 stars and up</span>
-              </label>
-
-              <label class="rating-option">
-                <input type="checkbox" name="rating[]" value="2">
-                <span class="stars" aria-hidden="true">★★ &amp; up</span>
-                <span class="visually-hidden">2 stars and up</span>
-              </label>
-            </fieldset>
-          </div>
-        </details>
-
-        <!-- New arrivals -->
-        <details class="filter-accordion">
-          <summary>New arrivals</summary>
-          <div class="filter-body">
-            <label class="checkbox-inline">
-              <input type="checkbox" name="new" value="1"> Only show new arrivals
-            </label>
-          </div>
-        </details>
-
-        <!-- Discount -->
-        <details class="filter-accordion">
-          <summary>Discount</summary>
-          <div class="filter-body">
-            <label class="discount-option">
-              <input type="radio" name="discount" value="" checked>
-              Any
-            </label>
-            <label class="discount-option">
-              <input type="radio" name="discount" value="10"> 10% &amp; up
-            </label>
-            <label class="discount-option">
-              <input type="radio" name="discount" value="25"> 25% &amp; up
-            </label>
-            <label class="discount-option">
-              <input type="radio" name="discount" value="50"> 50% &amp; up
-            </label>
-          </div>
-        </details>
-
-        <!-- Brand -->
-        <details class="filter-accordion">
-          <summary>Brand</summary>
-          <div class="filter-body">
-            <label class="brand-option"><input type="checkbox" name="brand[]" value="brand-a"> Brand A</label>
-            <label class="brand-option"><input type="checkbox" name="brand[]" value="brand-b"> Brand B</label>
-            <label class="brand-option"><input type="checkbox" name="brand[]" value="brand-c"> Brand C</label>
-            <label class="brand-option"><input type="checkbox" name="brand[]" value="brand-d"> Brand D</label>
-          </div>
-        </details>
-
-        <div class="filter-actions">
-          <button type="button" class="btn-apply" onclick="window.location.href='./404.html'">
-            Apply filters
-          </button>
-          <button type="button" class="btn-reset" onclick="window.location.href='./404.html'">
-            Reset
-          </button>
-        </div>
-      </form>
-    </details>
-
-    <!-- Desktop layout: left = sidebar filters, right = top bar with sort -->
-    <div class="controls-grid">
-
-      <!-- Sidebar filters (visible on desktop) -->
-      <form class="filters-sidebar" id="filters-sidebar" method="get" action="#" aria-label="Filter featured products">
-        <h3 class="filters-title">Filters</h3>
-
-        <div class="filter-block">
-          <label for="sidebar-category" class="filter-label">Category</label>
-          <select name="category" id="sidebar-category">
-            <option value="">All categories</option>
-            <option value="clothing">Clothing</option>
-            <option value="accessories">Accessories</option>
-            <option value="home">Home & Living</option>
-            <option value="beauty">Beauty</option>
-          </select>
-        </div>
-
-        <div class="filter-block">
-          <div class="filter-label">Price</div>
-          <div class="price-inputs">
-            <label for="sidebar-price-min" class="sr-only">Minimum price</label>
-            <input type="number" id="sidebar-price-min" name="price_min" placeholder="Min" min="0">
-
-            <label for="sidebar-price-max" class="sr-only">Maximum price</label>
-            <input type="number" id="sidebar-price-max" name="price_max" placeholder="Max" min="0">
-          </div>
-          <input type="range" id="sidebar-price-range" min="0" max="10000" step="50" value="10000" aria-hidden="true">
-        </div>
-
-        <div class="filter-block">
-          <div class="filter-label">Ratings</div>
-          <label class="rating-option">
-            <input type="checkbox" name="rating_sidebar[]" value="4">
-            <span class="stars">★★★★ &amp; up</span>
-          </label>
-          <label class="rating-option">
-            <input type="checkbox" name="rating_sidebar[]" value="3">
-            <span class="stars">★★★ &amp; up</span>
-          </label>
-        </div>
-
-        <div class="filter-block">
-          <label class="checkbox-inline">
-            <input type="checkbox" name="new_sidebar" value="1"> New arrivals only
-          </label>
-        </div>
-
-        <div class="filter-block">
-          <div class="filter-label">Discount</div>
-          <label class="discount-option"><input type="radio" name="discount_sidebar" value="" checked> Any</label>
-          <label class="discount-option"><input type="radio" name="discount_sidebar" value="10"> 10% &amp; up</label>
-          <label class="discount-option"><input type="radio" name="discount_sidebar" value="25"> 25% &amp; up</label>
-        </div>
-
-        <div class="filter-block">
-          <div class="filter-label">Brand</div>
-          <label class="brand-option"><input type="checkbox" name="brand_sidebar[]" value="brand-a"> Brand A</label>
-          <label class="brand-option"><input type="checkbox" name="brand_sidebar[]" value="brand-b"> Brand B</label>
-          <label class="brand-option"><input type="checkbox" name="brand_sidebar[]" value="brand-c"> Brand C</label>
-        </div>
-
-        <div class="filter-actions desktop-only">
-          <button type="submit" class="btn-apply">Apply filters</button>
-          <button type="reset" class="btn-reset">Reset</button>
-        </div>
-      </form>
-
-      <!-- Top bar + Sort (visible on desktop and mobile top after mobile details) -->
-      <div class="topbar-and-list">
-        <div class="topbar">
-          <div class="results-count" aria-live="polite">Showing <strong>24</strong> products</div>
-
-          <div class="sort-controls">
-            <label for="sort-by" class="sort-label">Sort by</label>
-            <select id="sort-by" name="sort_by" aria-label="Sort products">
-              <option value="price-asc">Price: Low to High</option>
-              <option value="price-desc">Price: High to Low</option>
-              <option value="latest">Latest</option>
-              <option value="rating-desc">Highest Rated</option>
-            </select>
-          </div>
-        </div>
-
-        <!-- Placeholder for products list -->
-        <div class="products-list" role="list" aria-label="Featured products list">
-          <!-- Example product card (repeat in your listing) -->
-          <article class="product-card" role="listitem">
-            <div class="product-thumb" aria-hidden="true">
-              <img src="./puma.webp" alt="">
-            </div>
-            <div class="product-body">
-              <h4 class="product-title">Product name</h4>
-              <div class="product-meta">
-                <span class="price">₹1,299</span>
-                <span class="rating" aria-hidden="true">★★★★☆</span>
-              </div>
-            </div>
-          </article>
-
-          <!-- Add more product cards here -->
-        </div>
-      </div>
-
-    </div> <!-- .controls-grid -->
-  </div> <!-- .container -->
+  </div>
 </section>
 
 

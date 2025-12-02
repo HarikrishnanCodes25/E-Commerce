@@ -377,334 +377,79 @@ main {
 
 
 
-/* product-filters.css - plain CSS, no variables */
-
-/* Utility: screen-reader only */
-.sr-only,
-.visually-hidden {
-  position: absolute !important;
-  height: 1px; width: 1px;
-  overflow: hidden;
-  clip: rect(1px, 1px, 1px, 1px);
-  white-space: nowrap;
+/* Main Wrapper */
+.quick-cats {
+  margin: 40px 0;
+  max-width: 1200px;
+  margin-left: 150px;
 }
 
-/* Basic layout */
-.container {
-  max-width: 1100px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 16px;
-  padding-right: 16px;
-  box-sizing: border-box;
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  color: #01173d;
+/* Section Title */
+.qc-title {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: rgb(1, 23, 61);
+  text-align: left;
 }
 
-/* Section */
-.product-controls {
-  padding-top: 28px;
-  padding-bottom: 28px;
-  background-color: #ffffff;
-  border-top: 1px solid #eef3fb;
-  border-bottom: 1px solid #eef3fb;
-}
-
-/* Mobile filter details toggle */
-.mobile-filter-toggle {
-  display: none; /* hidden on desktop */
-  margin-bottom: 12px;
-}
-
-.mobile-filter-summary {
-  list-style: none;
-  cursor: pointer;
-  padding: 12px 14px;
-  border-radius: 8px;
-  border: 1px solid #e6eef8;
-  background: #f7fbff;
-  font-weight: 600;
-}
-
-/* Grid layout for desktop */
-.controls-grid {
+/* Grid */
+.qc-grid {
   display: grid;
-  grid-template-columns: 260px 1fr;
-  gap: 20px;
-  align-items: start;
-}
-
-/* Sidebar filters */
-.filters-sidebar {
-  background: #fbfdff;
-  padding: 18px;
-  border-radius: 10px;
-  border: 1px solid #eef3fb;
-}
-
-.filters-title {
-  margin: 0 0 10px 0;
-  font-size: 16px;
-  font-weight: 700;
-}
-
-.filter-block {
-  margin-bottom: 14px;
-}
-
-.filter-label {
-  display: block;
-  margin-bottom: 8px;
-  font-size: 14px;
-  color: #0d4a81;
-  font-weight: 600;
-}
-
-.filter-block select,
-.filter-block input[type="number"],
-.filters-form select {
-  width: 100%;
-  padding: 8px 10px;
-  border: 1px solid #d9e7fb;
-  background: #ffffff;
-  border-radius: 8px;
-  box-sizing: border-box;
-  font-size: 14px;
-}
-
-/* Price inputs inline */
-.price-inputs {
-  display: flex;
-  gap: 8px;
-}
-
-.price-inputs input[type="number"] {
-  flex: 1 1 0;
-  padding: 8px;
-}
-
-/* Range input appearance */
-input[type="range"] {
-  width: 100%;
-  margin-top: 8px;
-}
-
-/* Ratings / options */
-.rating-option,
-.discount-option,
-.brand-option,
-.checkbox-inline {
-  display: flex;
-  gap: 8px;
-  align-items: center;
-  margin-bottom: 8px;
-  font-size: 14px;
-}
-
-.stars {
-  font-weight: 700;
-  color: #0d4a81;
-}
-
-/* Actions */
-.filter-actions {
-  margin-top: 12px;
-  display: flex;
-  gap: 10px;
-}
-
-.btn-apply,
-.btn-reset {
-  padding: 8px 12px;
-  border-radius: 8px;
-  border: none;
-  font-weight: 700;
-  cursor: pointer;
-  font-size: 14px;
-}
-
-.btn-apply {
-  background-color: #01173d;
-  color: #ffffff;
-}
-
-.btn-reset {
-  background: #ffffff;
-  border: 1px solid #d9e7fb;
-  color: #01173d;
-}
-
-/* Topbar / sort controls */
-.topbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 16px;
-  gap: 12px;
-}
-
-.results-count {
-  font-size: 14px;
-  color: #0d4a81;
-}
-
-.sort-controls {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.sort-label {
-  font-size: 14px;
-  color: #0d4a81;
-  font-weight: 600;
-}
-
-/* Products list */
-.products-list {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 18px;
 }
 
-.product-card {
-  border: 1px solid #eef3fb;
-  border-radius: 10px;
-  overflow: hidden;
-  background: #ffffff;
-  display: flex;
-  flex-direction: column;
-  min-height: 220px;
-}
-
-.product-thumb img {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-
-.product-body {
-  padding: 12px;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.product-title {
-  margin: 0;
-  font-size: 15px;
-  font-weight: 600;
-}
-
-.product-meta {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  color: #0d4a81;
-  font-weight: 700;
-}
-
-/* Desktop-only utility (hidden on mobile) */
-.desktop-only {
-  display: block;
-}
-
-/* Details-based accordions style (for mobile) */
-.filter-accordion summary {
+/* Single Item */
+.qc-item {
+  padding: 18px;
+  border: 1px solid #ddd;
+  background: #f8f8f8;
+  border-radius: 8px;
+  transition: 0.3s ease;
   cursor: pointer;
-  padding: 8px 0;
-  font-weight: 700;
-  color: #0d4a81;
 }
 
-.filter-accordion[open] summary {
-  color: #01173d;
+.qc-item h4 {
+  margin-bottom: 6px;
+  font-size: 17px;
+  color: #333;
 }
 
-.filter-accordion .filter-body {
-  padding: 8px 0 14px;
+.qc-item p {
+  color: #555;
+  font-size: 14px;
+  line-height: 1.4;
 }
 
-/* Small helper */
-.range-note {
-  font-size: 12px;
-  color: rgba(1,23,61,0.6);
-  margin-top: 6px;
+/* Hover */
+.qc-item:hover {
+  background: rgb(1, 23, 61);
+  border-color:rgb(1, 23, 61);
 }
 
-/* Focus styles for accessibility */
-input:focus, select:focus, button:focus {
-  outline: 3px solid rgba(1,23,61,0.12);
-  outline-offset: 2px;
-  border-radius: 6px;
+.qc-item:hover h4,
+.qc-item:hover p {
+  color: #fff;
 }
 
-/* ---------------------------
-   Responsive: <= 768px (mobile)
-   --------------------------- */
+/* Responsive - 768px */
 @media (max-width: 768px) {
-
-  /* show the mobile details toggle and collapse the desktop sidebar */
-  .mobile-filter-toggle {
-    display: block;
+  .quick-cats {
+  margin: 40px 0;
+  /* max-width: 1200px; */
+  margin-left: 10px;
   }
 
-  .controls-grid {
-    display: block;
-  }
-
-  /* hide sidebar form on mobile (we use the accordion inside details) */
-  .filters-sidebar {
-    display: none;
-  }
-
-  /* topbar layout stacks */
-  .topbar {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
-  }
-
-  /* products grid becomes 2 columns on small */
-  .products-list {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  /* smaller product card */
-  .product-card {
-    min-height: auto;
-  }
-
-  /* make buttons full width in mobile filter details */
-  .mobile-filter-toggle .filters-form .filter-actions {
-    display: flex;
-    gap: 8px;
-    margin-top: 12px;
-  }
-
-  .mobile-filter-toggle .filters-form .btn-apply,
-  .mobile-filter-toggle .filters-form .btn-reset {
-    flex: 1 1 0;
-  }
-
-  /* desktop-only controls hidden on mobile */
-  .desktop-only {
-    display: none;
-  }
-
-  /* make the summary look like a bar */
-  .mobile-filter-summary {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-}
-
-/* Very small screens - 420px */
-@media (max-width: 420px) {
-  .products-list {
+  .qc-grid {
     grid-template-columns: 1fr;
+  }
+  
+  .qc-item {
+    padding: 16px;
+  }
+  
+  .qc-title {
+    font-size: 20px;
   }
 }
 

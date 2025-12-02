@@ -981,7 +981,7 @@ main {
   margin: 18px 0 0 0;
   padding: 0;
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   gap: 18px;
   align-items: center;
   justify-items: center;
@@ -1057,7 +1057,7 @@ main {
   }
 
   .brand-list {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 14px;
   }
 

@@ -138,3 +138,61 @@ if (distance < 0) {
   document.querySelector(".countdown").innerHTML = "EXPIRED";
 }
 }, 1000);
+
+
+
+
+
+
+
+
+
+
+
+
+/* js code for promo code section */
+
+(function(){
+  const input = document.getElementById('promo-code');
+  const btn = document.getElementById('promo-apply');
+  const err = document.getElementById('promo-error');
+
+  // Validation function — change rules here if you want
+  function isValidPromo(value) {
+    const v = value.trim();
+    // rule: at least 4 chars, only letters/numbers/hyphen/underscore
+    return v.length >= 4 && /^[A-Za-z0-9\-_]+$/.test(v);
+  }
+
+  function showError(message) {
+    err.textContent = message;
+    err.hidden = false;
+    input.setAttribute('aria-invalid', 'true');
+    input.classList.add('invalid');
+    input.focus();
+  }
+
+  function hideError() {
+    err.hidden = true;
+    input.removeAttribute('aria-invalid');
+    input.classList.remove('invalid');
+  }
+
+  btn.addEventListener('click', function(e){
+    const value = input.value || '';
+    if (!isValidPromo(value)) {
+      // prevent redirect — show friendly message
+      showError('Plz fill the valid details.');
+      return;
+    }
+    // passed validation — hide any error and redirect
+    hideError();
+    // navigate to 404 page
+    window.location.href = './404.html';
+  });
+
+  // optional: clear error when user types
+  input.addEventListener('input', function(){
+    if (!err.hidden) hideError();
+  });
+})();

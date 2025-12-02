@@ -784,6 +784,11 @@ main {
   font-weight: 500;
 }
 
+.featured-products .fp-inner .product-grid .product-card:nth-child(1)
+ .prod-link .prod-media img{
+  margin-top: 15px;
+ }
+
 /* product grid */
 .product-grid {
   list-style: none;
@@ -793,6 +798,7 @@ main {
   grid-template-columns: repeat(4, 1fr);
   gap: 18px;
 }
+
 
 /* product card */
 .product-card {
